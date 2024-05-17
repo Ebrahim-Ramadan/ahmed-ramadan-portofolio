@@ -2,24 +2,14 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation, useMotionValue, useTransform } from "framer-motion";
 
-const keywords = [
-  "night",
-  "city",
-  "sky",
-  "sunset",
-  "sunrise",
-  "winter",
-  "skyscraper",
-  "building",
-  "cityscape",
-  "architecture",
-  "street",
-  "lights",
-  "downtown",
-  "bridge",
-];
+// Import local images
+const images = [];
+for (let i = 1; i <= 14; i++) {
+  images.push(require(`@/assets/quick-carousel/${i}.jpg`));
+}
 
 const ThreeDPhotoCarousel = () => {
+  console.log('images', images);
   const [isScreenSizeSm, setIsScreenSizeSm] = useState(false);
 
   useEffect(() => {
@@ -32,9 +22,7 @@ const ThreeDPhotoCarousel = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cards = keywords.map(
-    (keyword) => `https://source.unsplash.com/random/?${keyword}`
-  );
+  const cards = images;
 
   const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
   const faceCount = cards.length;
@@ -62,7 +50,7 @@ const ThreeDPhotoCarousel = () => {
   return (
     <>
       <div className="relative h-[200px] w-full overflow-hidden">
-               <div
+        <div
           className="flex h-full items-center justify-center bg-mauve-dark-2"
           style={{
             perspective: "1000px",
@@ -92,13 +80,13 @@ const ThreeDPhotoCarousel = () => {
                     width: `${faceWidth}px`,
                     transform: `rotateY(${
                       i * (360 / faceCount)
-                      }deg) translateZ(${radius}px)`,
-                      backfaceVisibility: "hidden",
+                    }deg) translateZ(${radius}px)`,
+                    backfaceVisibility: "hidden",
                   }}
                 >
                   <img
                     src={imgUrl}
-                    alt="img"
+                    alt={`img-${i}`}
                     className="pointer-events-none h-20 w-full rounded-xl object-cover md:h-28"
                   />
                 </div>
