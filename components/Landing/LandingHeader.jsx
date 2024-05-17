@@ -32,24 +32,13 @@ const MagneticBackgroundTab = ({
         onMouseMove={handleMouseMove}
         onMouseLeave={onMouseOut}
       >
-        <span className="group-hover:text-white relative px-4 py-2 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 z-10">
-              {item.text} <span>
-                  {/* {item.icon && */}
-                     {/* <div
-                     style={{
-                       marginRight: '-2rem',
-                       width: '8rem',
-                       height: '8rem',
-                       WebkitMaskImage: 'url(https://ahmed-ramadan.vercel.app/assets/external.png)',
-                       WebkitMaskSize: 'contain',
-                       WebkitMaskPosition: 'center',
-                       WebkitMaskRepeat: 'no-repeat',
-                       background: 'white',
-                     }}
-                   /> */}
-                  {/* } */}
+        <span className="group-hover:text-white relative px-4 py-2 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 z-10 flex flex-row gap-2 items-center">
+            {item.text}
+                  {item.icon ==='true' &&
+                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer-click"><path d="m9 9 5 12 1.8-5.2L21 14Z"/><path d="M7.2 2.2 8 5.1"/><path d="m5.1 8-2.9-.8"/><path d="M14 4.1 12 6"/><path d="m6 12-1.9 2"/></svg>
+                 } 
            
-          </span>
+          
           </span>
           
         <div
@@ -67,7 +56,7 @@ const tabs = [
   { id: 1, text: "Home" },
   { id: 3, text: "Projects" },
     { id: 2, text: "Experience" },
-    { id: 2, text: "Behance" },
+    { id: 2, text: "Behance", icon:"true" },
 ];
 
 export default function LandingHeader() {
