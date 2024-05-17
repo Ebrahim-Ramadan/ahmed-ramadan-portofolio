@@ -44,11 +44,19 @@ export const MagneticBackgroundTab = ({
       >
         <span className="text-zinc-300 hover:text-zinc-200  font-medium relative px-1 md:px-4 py-1 md:py-2 text-sm  transition-colors   z-10 flex flex-row gap-2 items-center">
             {item.text}
-                  {item.text ==='Behance' &&
-                  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mouse-pointer-click"><path d="m9 9 5 12 1.8-5.2L21 14Z"/><path d="M7.2 2.2 8 5.1"/><path d="m5.1 8-2.9-.8"/><path d="M14 4.1 12 6"/><path d="m6 12-1.9 2"/></svg>
-                 } 
+                 
            
-          
+        {/* <div
+          style={{
+            width:'1.2rem',
+            height: '1.2rem',
+            WebkitMaskImage: 'url(https://tv.onvo.me/assets/community.png)',
+            WebkitMaskSize: 'contain',
+            WebkitMaskPosition: 'center',
+            WebkitMaskRepeat: 'no-repeat',
+            backgroundColor:'white'
+          }}
+         ></div> */}
           </span>
           
         <div

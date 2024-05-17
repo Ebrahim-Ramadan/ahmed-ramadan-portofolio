@@ -1,42 +1,14 @@
 'use client';
 import Image from 'next/image';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import { MagneticBackgroundTab } from './MagneticBackgroundTab';
 
 const LandingHi = () => {
   const [isSticky, setIsSticky] = useState(false);
-  const stickyRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const stickyElement = stickyRef.current;
-
-      if (scrollY > 80 && !isSticky) {
-        setIsSticky(true);
-        requestAnimationFrame(() => {
-          if (stickyElement) {
-            stickyElement.style.transform = 'translateY(-50px)';
-            stickyElement.style.opacity = '0';
-            setTimeout(() => {
-              if (stickyElement) {
-                stickyElement.style.transition = 'transform 0.3s ease-out, opacity 0.3s ease-out';
-                stickyElement.style.transform = 'translateY(0)';
-                stickyElement.style.opacity = '1';
-              }
-            }, 0);
-          }
-        });
-      }
-      else if (scrollY <= 120 && isSticky) {
-        setIsSticky(false);
-        requestAnimationFrame(() => {
-          if (stickyElement) {
-            stickyElement.style.transform = 'translateY(0)';
-            stickyElement.style.opacity = '1';
-          }
-        });
-      }
+      setIsSticky(window.scrollY>50)
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -57,8 +29,7 @@ const LandingHi = () => {
         </div>
       </div>
       <div
-        ref={stickyRef}
-        className={`flex flex-row ${isSticky ? 'px-2 rounded-full fixed top-2 md:top-4 z-10 backdrop-blur-lg bg-white/10 border-none' : ''}`}
+        className={`flex flex-row ${isSticky ? 'md:px-0 px-2 rounded-full fixed top-2 md:top-4 z-10 backdrop-blur-lg bg-white/10 border-none' : ''}`}
       >
         {tabs.map((item) => (
           <MagneticBackgroundTab key={item.id} item={item} isSticky={isSticky} />
@@ -71,8 +42,18 @@ const LandingHi = () => {
 export default LandingHi;
 
 const tabs = [
-  { id: 1, text: 'Home', position: '0' },
-  { id: 3, text: 'Projects', position: '2' },
-  { id: 2, text: 'Experience', position: '4' },
-  { id: 2, text: 'Behance' },
+  { id: 1, text: 'Home', position: '0', icon:`
+  @/assets/home.png
+  ` },
+  { id: 3, text: 'Projects', position: '2', icon:`
+  @/assets/projects.png
+  ` },
+  { id: 2, text: 'Experience', position: '4', icon:`
+  @/assets/work.svg
+  
+  ` },
+  { id: 2, text: 'Behance', icon:`
+  @/assets/behance.svg
+  
+  ` },
 ];

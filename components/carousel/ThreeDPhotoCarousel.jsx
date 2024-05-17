@@ -1,16 +1,16 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation, useMotionValue, useTransform } from "framer-motion";
+import Image from "next/image";
 
-// Import local images
 const images = [];
 for (let i = 1; i <= 14; i++) {
-  images.push(require(`@/assets/quick-carousel/${i}.jpg`));
+  images.push(import(`@/assets/quick-carousel/${i}.webp`).then(module => module.default));
 }
 
 const ThreeDPhotoCarousel = () => {
-  console.log('images', images);
   const [isScreenSizeSm, setIsScreenSizeSm] = useState(false);
+  const [imageUrls, setImageUrls] = useState([]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -22,10 +22,11 @@ const ThreeDPhotoCarousel = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cards = images;
-
-  const cylinderWidth = isScreenSizeSm ? 1100 : 1800;
-  const faceCount = cards.length;
+  useEffect(() => {
+    Promise.all(images).then(setImageUrls);
+  }, []);
+  const cylinderWidth = isScreenSizeSm ? 1100 : 2200;
+  const faceCount = imageUrls.length;
   const faceWidth = cylinderWidth / faceCount;
   const dragFactor = 0.05;
   const radius = cylinderWidth / (2 * Math.PI);
@@ -71,7 +72,7 @@ const ThreeDPhotoCarousel = () => {
             onDragEnd={handleDragEnd}
             animate={controls}
           >
-            {cards.map((imgUrl, i) => {
+            {imageUrls.map((imgUrl, i) => {
               return (
                 <div
                   key={i}
@@ -84,8 +85,10 @@ const ThreeDPhotoCarousel = () => {
                     backfaceVisibility: "hidden",
                   }}
                 >
-                  <img
-                    src={imgUrl}
+                  <Image
+                    width={500}
+                    height={500}
+                    src={imgUrl.src}
                     alt={`img-${i}`}
                     className="pointer-events-none h-20 w-full rounded-xl object-cover md:h-28"
                   />
