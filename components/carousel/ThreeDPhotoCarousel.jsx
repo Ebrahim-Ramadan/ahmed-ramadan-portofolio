@@ -61,7 +61,7 @@ const ThreeDPhotoCarousel = () => {
 
   return (
     <>
-      <div className="relative h-[500px] w-full overflow-hidden">
+      <div className="relative h-[200px] w-full overflow-hidden">
                <div
           className="flex h-full items-center justify-center bg-mauve-dark-2"
           style={{
@@ -92,7 +92,8 @@ const ThreeDPhotoCarousel = () => {
                     width: `${faceWidth}px`,
                     transform: `rotateY(${
                       i * (360 / faceCount)
-                    }deg) translateZ(${radius}px)`,
+                      }deg) translateZ(${radius}px)`,
+                      backfaceVisibility: "hidden",
                   }}
                 >
                   <img

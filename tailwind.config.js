@@ -24,6 +24,7 @@ module.exports = {
           700: '#751c8c',
           800: '#631d72',
           900: '#290431', // Dark shades
+          switchPalette: '#27182C', // Dark shades
         },
       },
       animation: {

@@ -4,7 +4,7 @@ import React, { useRef, useState } from "react";
 const MagneticBackgroundTab = ({
   item,
 }) => {
-  const ref = useRef<HTMLButtonElement>(null);
+  const ref = useRef(null);
 
   const [hoverPosition, setHoverPosition] = useState({
     x: 0,
@@ -26,36 +26,48 @@ const MagneticBackgroundTab = ({
   };
 
   return (
-    <>
       <button
         ref={ref}
-        className="relative h-9"
+        className="group relative h-12"
         onMouseMove={handleMouseMove}
         onMouseLeave={onMouseOut}
       >
-        <span className="relative px-4 py-2 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100">
-          {item.text}
-        </span>{" "}
+        <span className="group-hover:text-white relative px-4 py-2 text-sm text-zinc-600 transition-colors hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100 z-10">
+              {item.text} <span>
+              <div
+  style={{
+    marginRight: '-2rem',
+    width: '8rem',
+    height: '8rem',
+    WebkitMaskImage: 'url(https://onvo.me/media/logo.svg)',
+    WebkitMaskSize: 'contain',
+    WebkitMaskPosition: 'center',
+    WebkitMaskRepeat: 'no-repeat',
+    background: 'white',
+  }}
+/>
+          </span>
+          </span>
+          
         <div
-          className="absolute bottom-0 left-0 -z-10 h-full w-full rounded-[4px] bg-zinc-200/80 transition-opacity dark:bg-zinc-800/80"
-          aria-hidden="true"
+          className="absolute bottom-0 left-0 -z-0  w-full rounded-3xl h-full  bg-primary-switchPalette"
           style={{
             transform: `translate(${hoverPosition.x}px, ${hoverPosition.y}px)`,
             opacity: hoverPosition.opacity,
           }}
         />
       </button>
-    </>
   );
 };
 
 const tabs = [
   { id: 1, text: "Home" },
-  { id: 2, text: "Blog" },
   { id: 3, text: "Projects" },
+    { id: 2, text: "Experience" },
+    { id: 2, text: "Behance", icon:'@/assets/external.png' },
 ];
 
-export default function Header() {
+export default function LandingHeader() {
   return (
     <div className="flex flex-row ">
       {tabs.map((item) => (

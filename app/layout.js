@@ -1,8 +1,7 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-// import { Toaster, toast } from 'sonner'
+import { Toaster } from 'sonner';
+import { GeistSans } from 'geist/font/sans';
 
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Ahmed Ramadan",
@@ -14,9 +13,10 @@ export default function RootLayout({ children }) {
     
     <html lang="en">
 
-      <body className={inter.className}>
-      {/* <Toaster /> */}
-        {children}</body>
+      <body className={GeistSans.className}>
+        {children}
+        <Toaster />
+      </body>
     </html>
   );
 }
