@@ -1,6 +1,7 @@
 import ThreeDPhotoCarousel from "@/components/carousel/ThreeDPhotoCarousel";
+
 import {LandingInfo} from "@/components/Landing/LandingInfo";
-import Image from "next/image";
+
 
 export default function Home() {
   return (
@@ -11,7 +12,6 @@ export default function Home() {
       <ThreeDPhotoCarousel />
       <ThreeDPhotoCarousel />
       <ThreeDPhotoCarousel />
-      
     </main>
   );
 }

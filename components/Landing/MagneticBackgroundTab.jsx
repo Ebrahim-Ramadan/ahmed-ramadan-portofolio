@@ -4,7 +4,7 @@ import React, {  useRef, useState } from "react";
 import { scrollToPosition } from "@/utils/scrollToPosition";
 export const MagneticBackgroundTab = ({
   item,
-  
+  isSticky
 }) => {
   const router = useRouter()
   const ref = useRef(null);
@@ -42,21 +42,26 @@ export const MagneticBackgroundTab = ({
         onMouseMove={handleMouseMove}
         onMouseLeave={onMouseOut}
       >
-        <span className="text-zinc-300 hover:text-zinc-200  font-medium relative px-1 md:px-4 py-1 md:py-2 text-sm  transition-colors   z-10 flex flex-row gap-2 items-center">
-            {item.text}
-                 
+      <span className={`text-zinc-300 hover:text-zinc-200  font-medium relative px-1 md:px-4 py-1 md:py-2 text-sm  transition-colors  items-center z-10 flex flex-row ${isSticky ? 'md:gap-0 gap-2' : ''} gap-2 flex flex-row`}>
+        <span>
+        {item.icon &&  (
+          isSticky ?
+          <span className="h-5 w-5 ">
+          {item.icon}
+            </span>
+            :
+            <span className="h-5 w-5 md:block hidden">
+            {item.icon}
+          </span>
+        )}
+       </span>
+        <span>
+        {!isSticky &&
+        item.text
+        
+        }
+            </span>     
            
-        {/* <div
-          style={{
-            width:'1.2rem',
-            height: '1.2rem',
-            WebkitMaskImage: 'url(https://tv.onvo.me/assets/community.png)',
-            WebkitMaskSize: 'contain',
-            WebkitMaskPosition: 'center',
-            WebkitMaskRepeat: 'no-repeat',
-            backgroundColor:'white'
-          }}
-         ></div> */}
           </span>
           
         <div

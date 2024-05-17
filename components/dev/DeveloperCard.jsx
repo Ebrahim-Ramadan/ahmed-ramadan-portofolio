@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { useRef, useState } from "react";
-import dev from '@/assets/dev.JPG'
+import dev from '@/assets/dev.webp'
 export const DeveloperCard = () => {
   const divRef = useRef(null);
   const [isFocused, setIsFocused] = useState(false);
