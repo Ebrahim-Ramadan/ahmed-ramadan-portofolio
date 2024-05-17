@@ -1,7 +1,7 @@
 'use client'
 import Image from "next/image";
 import { useRef, useState } from "react";
-import dev from '@/assets/dev.jpg'
+import dev from '@/assets/dev.JPG'
 export const DeveloperCard = () => {
   const divRef = useRef(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -54,7 +54,7 @@ export const DeveloperCard = () => {
       />
       <a className="mb-4 " href="https://ebrahim-ramadan.vercel.app/">
         <Image
-          className="rounded-full border"
+          className="rounded-full border "
           src={dev}
           width={100}
           height={100}
