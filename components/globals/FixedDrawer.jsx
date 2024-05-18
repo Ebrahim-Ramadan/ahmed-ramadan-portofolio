@@ -5,9 +5,11 @@ import Image from "next/image";
   import notifyMe from '@/assets/notify.webp'
   import Email from '@/assets/email.webp'
 import { InputBorderSpotlight } from "./InputBorderSpotlight";
+import { copyToClipboard } from "@/utils/Copy";
   export default function FixedDrawer() {
     const refMenu = useRef(null);
     const [openMenu, setOpenMenu] = useState(false);
+    const [Copied, setCopied] = useState(false);
     const [isScreenSizeSm, setIsScreenSizeSm] = useState(false);
   
     const duration = 0.2;
@@ -109,30 +111,49 @@ import { InputBorderSpotlight } from "./InputBorderSpotlight";
                         </div>
                       </div>
                     </li>
-               <li  className="hover:scale-105 w-full select-none rounded-b-[4px] rounded-t-[4px] bg-mauve-dark-2 transition-transform first:rounded-t-[12px] last:rounded-b-[12px] active:scale-[0.98] dark:bg-mauve-light-2"
+               <li  className=" w-full select-none rounded-b-[4px] rounded-t-[4px] bg-mauve-dark-2 transition-transform first:rounded-t-[12px] last:rounded-b-[12px] active:scale-[0.98] dark:bg-mauve-light-2"
                     >
-                      <a target='_blank' href="https://mail.google.com/mail/u/0/?fs=1&to=ali.elsabbagh@ejust.edu.eg&tf=cm"  className="flex items-center  py-3">
+                      <div  className="flex items-center  py-3">
                                     <Image
                                         width={50}
                                         height={50}
                                         alt='Email'
                                     src={Email}
                                     />
-                        <div className="w-full">
-                          <h3 className="text-base text-white font-bold">
-                           Send Me Email
-                      </h3>
-                      
-                      <div className="grid grid-cols-6 gap-2 items-center w-full">
-                      <a className="font-bold col-span-5  overflow-hidden text-ellipsis whitespace-nowrap">
-                        ahmedramadan791@gmail.com
+                        <div className="w-full flex-col gap-2 flex justify-center">
+                        
+                        <p className="text-base font-medium text-center">
+                            ahmedramadan791@gmail.com
+                            </p>
+                      <div className="w-full items-center w-full">
+                      <a className="font-bold w-full   overflow-hidden text-ellipsis whitespace-nowrap">
+                           
+                            <div className="grid grid-cols-2 [&>*]:backdrop-blur-md [&>*]:bg-white/10 [&>*]:flex [&>*]:flex-row [&>*]:justify-center [&>*]:items-center [&>*]:gap-2 items-center w-full gap-2  [&>*]:p-2 [&>*]:rounded-3xl [&>*]:">
+                              <a className="group hover:bg-white/20 transition duration-200" target='_blank' href="https://mail.google.com/mail/u/0/?fs=1&to=ali.elsabbagh@ejust.edu.eg&tf=cm"  >
+                                Send Email
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer group-hover:scale-110 transition duration-200  text-center lucide lucide-mail-plus"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M19 16v6"/><path d="M16 19h6"/></svg>
+                              </a>
+                            <button
+                              onClick={() => {
+                                copyToClipboard('ahmedramadan791@gmail.com')
+                                setCopied(true)
+                              }}
+                              className="group hover:bg-white/20 transition duration-200">
+                            {Copied?'Copied':'Copy Mail'}
+                              {Copied ?
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer group-hover:scale-110 transition duration-200  text-center lucide lucide-circle-check"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                            :
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer group-hover:scale-110 transition duration-200  text-center lucide lucide lucide-copy"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+                            }
+                               
+                              </button>
+                          
+                           </div>
                       </a>
-                        <button className="flex flex-row items-center justify-center text-center col-span-1  rounded-lg">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="cursor-pointer hover:scale-110 transition duration-200  text-center lucide lucide-mail-plus"><path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/><path d="M19 16v6"/><path d="M16 19h6"/></svg>
-                        </button>
+                       
                       </div>
                         </div>
-                      </a>
+                      </div>
                     </li>
               </motion.ul>
             </motion.div>

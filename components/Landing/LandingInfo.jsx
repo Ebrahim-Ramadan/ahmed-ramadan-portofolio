@@ -7,10 +7,11 @@ import { HireMe } from '../globals/HireMe'
 
 export const LandingInfo = () => {
   return (
-    <div className='flex flex-col w-full gap-4 '>
+    <div className='flex flex-col w-full gap-0 md:gap-4 '>
       <LandingHi />
       <div className='flex flex-col-reverse gap-2 md:flex-row items-center justify-evenly py-8 '>
-        <div className='text-base text-gray-400 flex flex-col justify-center w-full md:w-1/3 font-medium'>
+        <div className='leading-tight text-base text-gray-400 flex flex-col justify-between h-[30vh] w-full md:w-2/5 font-medium px-2'>
+          <div>
           <p className='text-lg'>
          I am   <span className='text-white font-bold text-xl'>Ahmed Ramadan</span> 
 
@@ -18,11 +19,11 @@ export const LandingInfo = () => {
 </p>
           <p>
             <span className='text-white font-bold'>3-year</span> Experienced Individual,
+            based on<span className='text-white font-bold'> Cairo, Egypt.</span> 
 
-            
 </p>
           <p>
-          Based on<span className='text-white font-bold'> Cairo, Egypt.</span> 
+          
 
             
             
@@ -35,8 +36,9 @@ export const LandingInfo = () => {
             
             
 </p>
+        </div>
           <div className='mt-2 w-full grid grid-cols-2 items-center'>
-            <button className='hover:bg-neutral-800 transition duration-200 h-8 py-2 rounded-full col-span-1 flex flex-row items-center justify-center hover:text-white gap-2'
+            <button className='border hover:border-primary-400 border-primary-600 border-2 hover:bg-neutral-800 transition duration-200 h-8 py-2 rounded-full col-span-1 flex flex-row items-center justify-center hover:text-white gap-2'
             style={{
               boxShadow:'rgb(86 67 100 / 80%) 0px 8px 30px'
             }}>
@@ -51,15 +53,16 @@ export const LandingInfo = () => {
                 
         </div>
         {/* <SVGLineGlowAnimateContainer> */}
-          <Image
-         
-          className='
-            
-            rounded-3xl '
-            width='auto'
-            height={250}
-          src={LandingProfileImg}
-          />
+        <div class="relative flex items-center rounded-t-[2rem] justify-center h-64 w-64 bg-primary-600">
+  <Image
+    className="absolute bottom-0 "
+    width="auto"
+    height={300}
+    src={LandingProfileImg}
+    alt="Profile"
+  />
+</div>
+
           {/* </SVGLineGlowAnimateContainer> */}
       </div>
     </div>
