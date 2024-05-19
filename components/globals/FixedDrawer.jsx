@@ -78,7 +78,7 @@ import { copyToClipboard } from "@/utils/Copy";
     }, [refMenu]);
   
     return (
-      <div className="fixed bottom-0 left-0 z-50 md:mx-6 mb-16 flex  w-full  items-end justify-start">
+      <div className="fixed bottom-4 left-0 z-50 md:mx-6 mb-16 flex  w-full  items-end justify-start">
         <AnimatePresence>
           {openMenu && (
             <motion.div
@@ -92,7 +92,7 @@ import { copyToClipboard } from "@/utils/Copy";
             >
               <motion.ul
                 variants={contentVariants}
-                className="relative flex w-full flex-col space-y-1 backdrop-blur-md bg-white/30 rounded-3xl p-2"
+                className="relative flex w-full flex-col space-y-1 backdrop-blur-lg bg-white/20 rounded-3xl p-2"
               >
                <li  className="w-full select-none rounded-b-[4px] rounded-t-[4px] bg-mauve-dark-2 transition-transform first:rounded-t-[12px] last:rounded-b-[12px] active:scale-[0.98] dark:bg-mauve-light-2"
                     >
@@ -137,6 +137,10 @@ import { copyToClipboard } from "@/utils/Copy";
                               onClick={() => {
                                 copyToClipboard('ahmedramadan791@gmail.com')
                                 setCopied(true)
+                                setTimeout(() => {
+                                  setOpenMenu(false)
+                                  setCopied(false)
+                                }, 1500);
                               }}
                               className="group hover:bg-white/20 transition duration-200">
                             {Copied?'Copied':'Copy Mail'}
