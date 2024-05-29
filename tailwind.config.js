@@ -24,14 +24,19 @@ module.exports = {
           700: '#751c8c',
           800: '#631d72',
           900: '#290431', // Dark shades
-          switchPalette: '#27182C', // Dark shades
+          switchPalette: 'rgb(31 0 42)', // Dark shades
         },
       },
       animation: {
+        grid: "grid 15s linear infinite",
         flip: "flip 6s infinite steps(2, end)",
         rotate: "rotate 3s linear infinite both",
       },
       keyframes: {
+        grid: {
+          "0%": { transform: "translateY(-50%)" },
+          "100%": { transform: "translateY(0)" },
+        },
         flip: {
           to: {
             transform: "rotate(360deg)",

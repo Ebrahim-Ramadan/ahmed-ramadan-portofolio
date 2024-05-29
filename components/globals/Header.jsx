@@ -1,11 +1,11 @@
 'use client';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { FixedNav } from '../globals/FixedNav';
-import { HomeIcon , ProjectsIcon, ExperienceIcon, BehanceIcon, Behance} from '../globals/Icons';
-import { MagneticBackgroundTab } from './MagneticBackgroundTab';
+import { FixedNav } from './FixedNav';
+import { HomeIcon , ProjectsIcon, ExperienceIcon, BehanceIcon, Behance} from './Icons';
+import { MagneticBackgroundTab } from '../Landing/MagneticBackgroundTab';
 
-const LandingHi = () => {
+export const Header = () => {
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -20,10 +20,10 @@ const LandingHi = () => {
   }, [isSticky]);
 
   return (
-    <div className="flex flex-col-reverse md:flex-row w-full items-center justify-center">
+    <div className={` flex flex-col-reverse md:flex-row w-full items-center justify-center py-8 z-20 fixed top-0`}>
       
       <div
-        className={`flex flex-row  }`}
+        className={`flex flex-row  ${isSticky&&'hidden'}`}
       >
         {tabs.map((item) => (
           <MagneticBackgroundTab key={item.id} item={item}  />
@@ -40,7 +40,7 @@ const LandingHi = () => {
   );
 };
 
-export default LandingHi;
+export default Header;
 
 const tabs = [
   { id: 1, text: 'Home', position: '0', icon: <HomeIcon /> },
