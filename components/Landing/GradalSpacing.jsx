@@ -15,7 +15,7 @@ export default function GradualSpacing({
   className,
 }) {
   return (
-    <div className="flex justify-center space-x-1">
+    <a className="flex justify-center space-x-1" href="https://ace-mb.com/" target='_blank'>
       <AnimatePresence>
         {text.split("").map((char, i) => (
           <motion.h1
@@ -31,6 +31,6 @@ export default function GradualSpacing({
           </motion.h1>
         ))}
       </AnimatePresence>
-    </div>
+    </a>
   );
 }

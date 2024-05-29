@@ -116,8 +116,8 @@ export function AnimatedGridPattern({
             }}
             onAnimationComplete={() => updateSquarePosition(id)}
             key={`${x}-${y}-${index}`}
-            width={width - 10}
-            height={height - 10}
+            width={width - 1}
+            height={height - 1}
             x={x * width + 1}
             y={y * height + 1}
             fill="currentColor"

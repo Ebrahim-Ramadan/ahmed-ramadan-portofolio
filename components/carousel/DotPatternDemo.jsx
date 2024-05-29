@@ -4,14 +4,25 @@ import ThreeDPhotoCarousel from "./ThreeDPhotoCarousel";
 
 const AnimatedGridPatternDemo = () => {
   return (
-    <div className="relative flex w-full items-center justify-center overflow-hidden  ">
-      <div className="flex flex-col w-full justify-center">
-      <h1 className="text-4xl text-primary-200 text-center font-bold">Projects Thumbnails</h1>
-      <ThreeDPhotoCarousel/>
+    <div className="relative min-h-screen flex w-full items-center justify-center overflow-hidden backdrop-blur-lg mt-[-15rem] -z-10"
+    style={{
+      backdropFilter: "blur(15px)",
+    }}>
+      <div className="relative flex flex-col w-full justify-center backdrop-blur-lg"
+                style={{
+                  backdropFilter: "blur(15px)",
+                }}>
+       
+        <h1 className="md:text-4xl text-2xl text-primary-600 text-center font-bold relative z-20">
+          Projects Thumbnails
+        </h1>
+        <div className="relative z-20">
+          <ThreeDPhotoCarousel />
+        </div>
       </div>
       <AnimatedGridPattern
-        numSquares={30}
-        maxOpacity={0.1}
+        numSquares={40}
+        maxOpacity={0.3}
         duration={3}
         repeatDelay={1}
         className="md:p-72 [mask-image:radial-gradient(300px_circle_at_center,white,transparent)]

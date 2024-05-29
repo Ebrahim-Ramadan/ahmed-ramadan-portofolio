@@ -50,7 +50,7 @@ const ThreeDPhotoCarousel = () => {
 
   return (
     <>
-      <div className="relative h-[200px] w-full overflow-hidden">
+      <div className="relative h-40 md:h-[200px] w-full overflow-hidden">
         <div
           className="flex h-full items-center justify-center bg-mauve-dark-2"
           style={{
