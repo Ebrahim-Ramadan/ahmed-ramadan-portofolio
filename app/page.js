@@ -2,6 +2,7 @@ import ThreeDPhotoCarousel from "@/components/carousel/ThreeDPhotoCarousel";
 import { Separator } from "@/components/globals/Icons";
 
 import {LandingInfo} from "@/components/Landing/LandingInfo";
+import { ProjectDrawer } from "@/components/Project Drawer/ProjectDrawer";
 
 
 export default function Home() {
@@ -10,7 +11,8 @@ export default function Home() {
     >
       <LandingInfo/>
       <ThreeDPhotoCarousel />
-      <Separator/>
+      <Separator />
+      {/* <ProjectDrawer/> */}
     </main>
   );
 }

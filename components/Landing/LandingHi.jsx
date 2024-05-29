@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import { FixedNav } from '../globals/FixedNav';
-import { HomeIcon , ProjectsIcon, ExperienceIcon, BehanceIcon} from '../globals/Icons';
+import { HomeIcon , ProjectsIcon, ExperienceIcon, BehanceIcon, Behance} from '../globals/Icons';
 import { MagneticBackgroundTab } from './MagneticBackgroundTab';
 
 const LandingHi = () => {
@@ -46,5 +46,7 @@ const tabs = [
   { id: 1, text: 'Home', position: '0', icon: <HomeIcon /> },
   { id: 3, text: 'Projects', position: '2', icon: <ProjectsIcon /> },
   { id: 2, text: 'Experience', position: '4', icon: <ExperienceIcon /> },
-  { id: 2, text: 'Behance', icon: <BehanceIcon /> },
+  {
+    id: 2, text: <Behance/>, icon: <BehanceIcon />
+  },
 ];
