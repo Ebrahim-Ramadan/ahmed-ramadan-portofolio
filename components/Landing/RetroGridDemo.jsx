@@ -28,7 +28,7 @@ export const RetroGridDemo = () => {
 
   return (
     <div
-      className="relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#290431] transition-transform duration-300"
+      className="z-10 relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#290431] transition-transform duration-300"
       style={{ transform: `scale(${scale})`, borderRadius: borderRadius }}
     >
       <div className="flex flex-col justify-center items-center mt-8 gap-2">
@@ -41,7 +41,7 @@ export const RetroGridDemo = () => {
     alt="Profile"
   />
     </div>
-        <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-r from-primary-500 via-primary-400 to-primary-300 bg-clip-text text-center text-7xl font-bold leading-none tracking-tighter text-transparent">
+        <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-r from-primary-500 via-primary-400 to-primary-300 bg-clip-text text-center text-5xl md:text-7xl font-bold leading-none tracking-tighter text-transparent">
           <Info word="Ahmed Ramadan" />
         </span>
         {/* <GradualSpacing
@@ -51,7 +51,7 @@ export const RetroGridDemo = () => {
         <div className="flex flex-col justify-center">
         <span className="text-gray-300 font-light px-4 text-center md:text-sm text-xs">
           Senior Architect at <a className="underline font-medium cursor-pointer text-primary-600">
-          ACE Moharram-Bakhoum Inc.
+          ACE Moharram-Bakhoum
           </a>
         </span>
         <span className="text-gray-300 font-light px-4 text-center md:text-sm text-xs">
