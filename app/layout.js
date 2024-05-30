@@ -3,6 +3,7 @@ import { GeistSans } from 'geist/font/sans';
 import FixedDrawer from "@/components/globals/FixedDrawer";
 import Header from "@/components/globals/Header";
 import { RetroGrid } from "@/components/Landing/RetroGrid";
+import { Footer } from "@/components/footer/Footer";
 
 export const metadata = {
   title: "Ahmed Ramadan",
@@ -18,7 +19,9 @@ export default function RootLayout({ children }) {
       <RetroGrid />
           
   <FixedDrawer/>
-  {children}
+        {children}
+  <Footer/>
+        
 </body>
 </html>
     

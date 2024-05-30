@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import GradualSpacing from "./GradalSpacing";
 import Info from "./Info";
-import LandingProfileImg from '@/assets/LandingProfileImg.png'
+import LandingProfileImg from '@/assets/LandingProfileImg.webp'
 
 export const RetroGridDemo = () => {
   const [scale, setScale] = useState(1);
@@ -28,7 +28,7 @@ export const RetroGridDemo = () => {
 
   return (
     <div
-      className="z-10 relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#290431] transition-transform duration-300"
+      className="z-10 relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#18011D] transition-transform duration-300"
       style={{ transform: `scale(${scale})`, borderRadius: borderRadius }}
     >
       <div className="flex flex-col justify-center items-center mt-8 gap-2">
@@ -56,7 +56,7 @@ export const RetroGridDemo = () => {
         </span>
         <span className="text-gray-300 font-light px-4 text-center md:text-sm text-xs">
           Talented Individual BAsed on <a className="font-medium cursor-pointer">
-          Cairo, Egypt
+          Cairo, Egypt.
           </a>
         </span>
         </div>

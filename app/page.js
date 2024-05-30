@@ -23,7 +23,6 @@ export default function Home() {
       <DotPatternDemo />
       <Featuring/>
       <Separator />
-  <Footer/>
       
     </main>
   );

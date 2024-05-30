@@ -1,10 +1,10 @@
-import featuringImg from '@/assets/milestone/cover.jpg'
-import featuringImg1 from '@/assets/milestone/grid1.jpg'
-import featuring21  from '@/assets/milestone/grid2.jpg'
-import featuringFull  from '@/assets/milestone/grid3.jpg'
-import featuring22 from '@/assets/milestone/gridgrid2.jpg'
-import featuringImg3 from '@/assets/milestone/gridgrid.jpg'
-import external from '@/assets/milestone/external.jpg'
+import featuringImg from '@/assets/milestone/cover.webp'
+import featuringImg1 from '@/assets/milestone/grid1.webp'
+import featuring21  from '@/assets/milestone/grid2.webp'
+import featuringFull  from '@/assets/milestone/grid3.webp'
+import featuring22 from '@/assets/milestone/gridgrid2.webp'
+import featuringImg3 from '@/assets/milestone/gridgrid.webp'
+import external from '@/assets/milestone/external.webp'
 import Image from 'next/image'
 import { AwardIcon, Gallery, Share, TrophyIcon } from '../globals/Icons'
 
@@ -38,10 +38,10 @@ export default function Featuring() {
             
             width={1200}
           />
-          <a target='_blank' href='https://www.behance.net/gallery/175726549/GRADUATION-PROJECT-OLYMPIC-AQUATIC-CENTER' className='flex flex-col justify-end overflow-hidden p-4 backdrop-blur-xl bg-black/80 rounded-b-3xl hover:bg-black/40 transition duration-200 h-60'>
+          <a target='_blank' href='https://www.behance.net/gallery/175726549/GRADUATION-PROJECT-OLYMPIC-AQUATIC-CENTER' className='flex flex-col group justify-end overflow-hidden p-4 backdrop-blur-xl bg-black/80 rounded-b-3xl hover:bg-black/40 transition duration-200 h-60'>
           <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-[#000000a8]  to-transparent"></div>
 
-          <div className="absolute inset-0 -z-10 bg-gradient-to-b from-black to-transparent ">
+          <div className=" absolute inset-0 -z-10 bg-gradient-to-b from-black to-transparent ">
               <Image
                     src={external}
                     width='auto'
