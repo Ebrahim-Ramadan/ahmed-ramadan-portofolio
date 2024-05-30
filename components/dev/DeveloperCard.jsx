@@ -1,7 +1,8 @@
 'use client'
 import Image from "next/image";
 import { useRef, useState } from "react";
-import dev from '@/assets/dev.webp'
+import dev from '@/assets/dev.webp';
+
 export const DeveloperCard = () => {
   const divRef = useRef(null);
   const [isFocused, setIsFocused] = useState(false);
@@ -52,22 +53,33 @@ export const DeveloperCard = () => {
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(205,205,205,.15), transparent 40%)`,
         }}
       />
-      <a className="mb-4 " href="https://ebrahim-ramadan.vercel.app/">
+      <a className="mb-4" href="https://ebrahim-ramadan.vercel.app/">
         <Image
-          className="rounded-full border "
+          className="rounded-full border"
           src={dev}
           width={100}
           height={100}
+          alt="Developer"
         />
       </a>
-      <a href="https://ebrahim-ramadan.vercel.app" target='_blank' className="hover:underline font-medium tracking-tight text-neutral-100">
-       Ebrahim Ramadan
+      <a
+        href="https://ebrahim-ramadan.vercel.app"
+        target='_blank'
+        className="hover:underline font-medium tracking-tight text-neutral-100"
+      >
+        Ebrahim Ramadan
       </a>
       <p className="text-sm text-neutral-300 mt-[-0.4rem]">
-         software eng
+        Software Engineer
       </p>
       <p className="text-sm text-neutral-400">
-      3-year experienced web dev at <a href="https://onvo.me/" className="hover:underline text-white">onvo</a>
+        3-year experienced web developer
+      </p>
+      <p className="text-sm text-neutral-400">
+        Currently working at <a href="https://onvo.me/" className="hover:underline text-white">Onvo</a>
+      </p>
+      <p className="text-sm text-neutral-400">
+        Teaching Instructor at <a href="https://ischoolvirtual.com/" className="hover:underline text-white">iSchool</a>
       </p>
     </div>
   );

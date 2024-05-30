@@ -28,9 +28,13 @@ export const MagneticBackgroundTab = ({
     setHoverPosition({ x: 0, y: 0, opacity: 0 });
   };
   const routeToBehance = () => {
-    if (item.text != 'Behance') {
-      scrollToPosition(item.position)      
+    if (item.text === 'Behance') {
+      router.push('https://www.behance.net/ARCHUWK/projects')
     }
+      else {
+        scrollToPosition(item.position)      
+      
+      }
 }
   return (
     <button

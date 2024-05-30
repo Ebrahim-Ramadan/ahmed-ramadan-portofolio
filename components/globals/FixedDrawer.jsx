@@ -2,8 +2,6 @@
   import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
   import React, { useState, useEffect, useRef } from "react";
-  import notifyMe from '@/assets/notify.webp'
-  import Email from '@/assets/email.webp'
 import { copyToClipboard } from "@/utils/Copy";
   export default function FixedDrawer() {
     const refMenu = useRef(null);

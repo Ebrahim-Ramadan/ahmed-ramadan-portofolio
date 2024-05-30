@@ -7,6 +7,8 @@ import LandingHi from "@/components/globals/Header";
 import {RetroGridDemo} from "@/components/Landing/RetroGridDemo";
 import { ProjectDrawer } from "@/components/Project Drawer/ProjectDrawer";
 import { RetroGrid } from "@/components/Landing/RetroGrid";
+import Featuring from "@/components/Featuring/Featuring";
+import { Footer } from "@/components/footer/Footer";
 
 
 export default function Home() {
@@ -18,7 +20,11 @@ export default function Home() {
       <Separator /> */}
       <RetroGridDemo />
       
-      <DotPatternDemo/>
+      <DotPatternDemo />
+      <Featuring/>
+      <Separator />
+  <Footer/>
+      
     </main>
   );
 }
