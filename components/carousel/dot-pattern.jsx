@@ -81,6 +81,11 @@ export function AnimatedGridPattern({
 
   return (
     <svg
+    style={{
+      backdropFilter: "blur(10px)",
+backgroundColor:'rgba(25,25,25,.1)'
+
+    }}
       ref={containerRef}
       aria-hidden="true"
       className="-z-10 pointer-events-none absolute inset-0 h-full w-full fill-gray-400/30 stroke-gray-400/30 opacity-20"

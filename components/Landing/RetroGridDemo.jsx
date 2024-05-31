@@ -2,21 +2,16 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import GradualSpacing from "./GradalSpacing";
 import Info from "./Info";
-import LandingProfileImg from '@/assets/LandingProfileImg.webp'
+import LandingProfileImg from '@/assets/LandingProfileImg.webp';
+import { HireMe } from "../globals/HireMe";
 
 export const RetroGridDemo = () => {
-  const [scale, setScale] = useState(1);
-  const [borderRadius, setBorderRadius] = useState('0rem');
+  const [scrollY, setScrollY] = useState(0);
+  const debouncedScrollY = useDebounce(scrollY, 50); // Adjust the delay as needed
 
   const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const maxScroll = 200; // Maximum scroll value where the scaling stops
-    const newScale = Math.max(0.6, 1 - (scrollY / maxScroll) * 0.3); // Scale between 1 and 0.8
-    const newBorderRadius = `${2 + (scrollY / maxScroll) * 4}rem`; // Border-radius between 4rem and 8rem
-    setScale(newScale);
-    setBorderRadius(newBorderRadius);
+    setScrollY(window.scrollY);
   };
 
   useEffect(() => {
@@ -26,12 +21,17 @@ export const RetroGridDemo = () => {
     };
   }, []);
 
+  const maxScroll = 200; // Maximum scroll value where the scaling stops
+  const newScale = Math.max(0.6, 1 - (debouncedScrollY / maxScroll) * 0.3); 
+  const newBorderRadius = `${2 + (debouncedScrollY / maxScroll) * 2}rem`; 
+  const newOpacity = Math.max(0.6, 1 - (debouncedScrollY / maxScroll) * 0.3); 
+
   return (
     <div
-      className="z-10 relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#18011D] transition-transform duration-300"
-      style={{ transform: `scale(${scale})`, borderRadius: borderRadius }}
+      className="z-10 relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#18011D] transition-transform duration-300 "
+      style={{ transform: `scale(${newScale})`, borderRadius: newBorderRadius, opacity:newOpacity }}
     >
-      <div className="flex flex-col justify-center items-center mt-8 gap-2">
+      <div className="flex flex-col justify-center items-center md:mt-24 gap-2">
       <div className="relative flex items-center justify-center h-44 md:h-72 w-44 md:w-72 rounded-full bg-gradient-to-t from-primary-600 to-primary">
           <Image
     className="absolute md:h-96 h-56 w-fit bottom-0 rounded-b-full mask-image"
@@ -60,9 +60,28 @@ export const RetroGridDemo = () => {
           </a>
         </span>
         </div>
+        <HireMe/>
       </div>
     </div>
   );
 };
 
 export default RetroGridDemo;
+
+
+
+export function useDebounce(value, delay) {
+  const [debouncedValue, setDebouncedValue] = useState(value);
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+}

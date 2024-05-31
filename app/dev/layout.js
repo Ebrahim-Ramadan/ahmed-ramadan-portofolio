@@ -1,3 +1,5 @@
+import FixedDrawer from "@/components/globals/FixedDrawer";
+import { RetroGrid } from "@/components/Landing/RetroGrid";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -12,6 +14,9 @@ export default function RootLayout({ children }) {
     
     <html lang="en">
       <body className={inter.className}>
+      <RetroGrid />
+  
+  <FixedDrawer/>
         {children}</body>
     </html>
   );

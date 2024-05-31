@@ -50,6 +50,7 @@ Dock.displayName = "Dock";
 
 
 const DockIcon = ({
+  href,
   size,
   magnification = DEFAULT_MAGNIFICATION,
   distance = DEFAULT_DISTANCE,
@@ -79,14 +80,15 @@ const DockIcon = ({
   });
 
   return (
-    <motion.div
+    <motion.a
+      href={href}
       ref={ref}
       style={{ width }}
       className="flex aspect-square cursor-pointer items-center justify-center rounded-full bg-neutral-400/40"
       {...props}
     >
       {children}
-    </motion.div>
+    </motion.a>
   );
 };
 

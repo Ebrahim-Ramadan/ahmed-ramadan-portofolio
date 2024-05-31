@@ -3,7 +3,8 @@ import { GeistSans } from 'geist/font/sans';
 import FixedDrawer from "@/components/globals/FixedDrawer";
 import Header from "@/components/globals/Header";
 import { RetroGrid } from "@/components/Landing/RetroGrid";
-import { Footer } from "@/components/footer/Footer";
+import { Footer } from "@/components/globals/Footer";
+import { ViewTransitions } from 'next-view-transitions'
 
 export const metadata = {
   title: "Ahmed Ramadan",
@@ -12,18 +13,21 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <ViewTransitions>
 <html lang="en">
 
-        <body className={GeistSans.className}>
-          <Header />
-      <RetroGrid />
-          
-  <FixedDrawer/>
-        {children}
-  <Footer/>
-        
+<body className={GeistSans.className}>
+  <Header />
+<RetroGrid />
+  
+<FixedDrawer/>
+{children}
+<Footer/>
+
 </body>
 </html>
+    </ViewTransitions>
+
     
   );
 }

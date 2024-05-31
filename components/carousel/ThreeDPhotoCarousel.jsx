@@ -25,7 +25,7 @@ const ThreeDPhotoCarousel = () => {
   useEffect(() => {
     Promise.all(images).then(setImageUrls);
   }, []);
-  const cylinderWidth = isScreenSizeSm ? 1100 : 2200;
+  const cylinderWidth = isScreenSizeSm ? 1200 : 2200;
   const faceCount = imageUrls.length;
   const faceWidth = cylinderWidth / faceCount;
   const dragFactor = 0.05;
@@ -50,7 +50,7 @@ const ThreeDPhotoCarousel = () => {
 
   return (
     <>
-      <div className="relative h-40 md:h-[200px] w-full overflow-hidden">
+      <div className="relative h-36 md:h-[200px] w-full overflow-hidden">
         <div
           className="flex h-full items-center justify-center bg-mauve-dark-2"
           style={{
@@ -76,7 +76,7 @@ const ThreeDPhotoCarousel = () => {
               return (
                 <div
                   key={i}
-                  className="absolute flex h-full origin-center items-center justify-center bg-mauve-dark-2 px-1"
+                  className="absolute flex h-full origin-center items-center justify-center bg-mauve-dark-2 px-[2px] md:px-1"
                   style={{
                     width: `${faceWidth}px`,
                     transform: `rotateY(${
@@ -86,8 +86,8 @@ const ThreeDPhotoCarousel = () => {
                   }}
                 >
                   <Image
-                    width={500}
-                    height={500}
+                    width={300}
+                    height={300}
                     src={imgUrl.src}
                     alt={`img-${i}`}
                     className="pointer-events-none h-20 w-full rounded-xl object-cover md:h-28"

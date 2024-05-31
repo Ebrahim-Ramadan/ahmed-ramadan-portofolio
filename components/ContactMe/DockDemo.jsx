@@ -1,32 +1,29 @@
 import { Dock, DockIcon } from "./dock";
 import React from "react";
-import { Behance, FB, Gmail, LinkedIn, WhastApp } from "../globals/Icons";
+import { Behance, FB, Gmail, LinkedIn, Telegram } from "../globals/Icons";
 
 
 export function DockDemo() {
   return (
-    <div className="relative flex  w-full flex-col items-center justify-center overflow-hidden">
-      <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300/80 bg-clip-text text-center text-4xl md:text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-slate-900/10">
-        Contact Me
-      </span>
+    <div className="relative flex  flex-col items-center justify-center "> 
       <Dock>
-        <DockIcon>
+        <DockIcon href='https://www.behance.net/ARCHUWK/projects'>
           <Behance/>
         </DockIcon>
-        <DockIcon>
+        <DockIcon href='https://www.facebook.com/Hamosha909'>
           <FB/>
         </DockIcon>
-        <DockIcon>
+        <DockIcon href='https://www.linkedin.com/in/ahmed-ramadan-2aab2b177/'>
           <LinkedIn/>
         </DockIcon>
-        <DockIcon>
+        <DockIcon href='https://mail.google.com/mail/u/0/?fs=1&to=ali.elsabbagh@ejust.edu.eg&tf=cm'>
           <Gmail />
         </DockIcon>
-        <DockIcon>
-          <WhastApp className="h-6 w-6" />
+        <DockIcon href='https://t.me/ARCHUWK'>
+          <Telegram  />
         </DockIcon>
       </Dock>
-      <div className="pointer-events-none absolute inset-0 h-full bg-[radial-gradient(circle_at_50%_200%,rgba(0,0,0,0.2),rgba(255,255,255,0))]" />
+   
     </div>
   );
 }

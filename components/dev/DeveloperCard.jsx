@@ -44,7 +44,7 @@ export const DeveloperCard = () => {
       onBlur={handleBlur}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
-      className="flex flex-col justify-center items-center gap-2 relative max-w-xs rounded-3xl border border-neutral-800 bg-neutral-950 p-8"
+      className="flex flex-col justify-center items-center gap-2 relative max-w-xs rounded-3xl border border-neutral-800 bg-neutral-950 p-4 md:p-8"
     >
       <div
         className="rounded-3xl pointer-events-none absolute -inset-px opacity-0 transition duration-500"
@@ -53,12 +53,12 @@ export const DeveloperCard = () => {
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(205,205,205,.15), transparent 40%)`,
         }}
       />
-      <a className="mb-4" href="https://ebrahim-ramadan.vercel.app/">
+      <a className="mb-4 " href="https://ebrahim-ramadan.vercel.app/">
         <Image
-          className="rounded-full border"
+          className="rounded-full border border-2 w-32"
           src={dev}
-          width={100}
-          height={100}
+          width={800}
+          height={800}
           alt="Developer"
         />
       </a>
@@ -72,6 +72,7 @@ export const DeveloperCard = () => {
       <p className="text-sm text-neutral-300 mt-[-0.4rem]">
         Software Engineer
       </p>
+      <div className="flex flex-col items-center justify-center">
       <p className="text-sm text-neutral-400">
         3-year experienced web developer
       </p>
@@ -81,6 +82,7 @@ export const DeveloperCard = () => {
       <p className="text-sm text-neutral-400">
         Teaching Instructor at <a href="https://ischoolvirtual.com/" className="hover:underline text-white">iSchool</a>
       </p>
+      </div>
     </div>
   );
 };

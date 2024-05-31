@@ -8,12 +8,13 @@ import {RetroGridDemo} from "@/components/Landing/RetroGridDemo";
 import { ProjectDrawer } from "@/components/Project Drawer/ProjectDrawer";
 import { RetroGrid } from "@/components/Landing/RetroGrid";
 import Featuring from "@/components/Featuring/Featuring";
-import { Footer } from "@/components/footer/Footer";
+import { Footer } from "@/components/globals/Footer";
+import { MoreProjects } from "@/components/Featuring/MoreProjects";
 
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between   bg-transparent"
+    <main className="flex min-h-screen flex-col items-center justify-between gap-12  bg-transparent"
     >
       {/* <LandingHi/>
       <ThreeDPhotoCarousel />
@@ -21,7 +22,10 @@ export default function Home() {
       <RetroGridDemo />
       
       <DotPatternDemo />
-      <Featuring/>
+      <Separator />
+
+      <Featuring />
+      <MoreProjects/>
       <Separator />
       
     </main>

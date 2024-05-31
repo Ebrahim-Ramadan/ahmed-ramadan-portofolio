@@ -6,21 +6,34 @@ import featuring22 from '@/assets/milestone/gridgrid2.webp'
 import featuringImg3 from '@/assets/milestone/gridgrid.webp'
 import external from '@/assets/milestone/external.webp'
 import Image from 'next/image'
-import { AwardIcon, Gallery, Share, TrophyIcon } from '../globals/Icons'
+import { AwardIcon, Gallery, Like, Share, TrophyIcon, Views } from '../globals/Icons'
 
 
 export default function Featuring() {
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32 min-h-screen w-full flex flex-row items-center justify-center">
+    <section className="w-full  min-h-screen w-full flex flex-row items-center justify-center">
       <div className="w-full px-2 md:px-32 grid grid-cols-1 lg:grid-cols-2 gap-2 ">
         <div className="relative w-full h-[500px] md:h-[50rem] rounded-3xl ">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-transparent z-10 flex flex-col justify-end p-4 rounded-3xl">
             <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black via-[#000000a8]  to-transparent"></div>
+            <div className='flex md:flex-row flex-col items-center gap-2 md:px-2'>
             <p className="md:px-4 font-light text-gray-300 md:text-base text-sm w-full">
               This award-winning project showcases my commitment to sustainable design and innovative architectural solutions, and also my college graduation project with a total area of 42,000 square meters, based in Cairo, 8 minutes from Al-Ahly we al-salam Club Stadium by car, and 24 minutes from Cairo Airport.
-            </p>
-            <div className="flex flex-col md:flex-row justify-end w-full gap-2 mt-4 [&>*]:flex [&>*]:flex-row [&>*]:items-center [&>*]:text-xs [&>*]:justify-center">
-              <div className="justify-center bg-primary-700 px-3 py-1 rounded-3xl" variant="outline">
+              </p>
+              <div className='flex flex-row md:flex-col items-center [&>*]:flex  [&>*]:flex-col  [&>*]:items-center gap-4'>
+                <div>
+                  <Views />
+                  20,422
+</div>
+                <div>
+                  <Like />
+                  2,188
+</div>
+              </div>
+           </div>
+
+            <div className="flex flex-col md:flex-row justify-end md:w-full gap-2 mt-4 [&>*]:flex [&>*]:flex-row [&>*]:items-center [&>*]:text-xs [&>*]:w-fit [&>*]:justify-end">
+              <div className=" bg-primary-700 px-3 py-1 rounded-3xl" variant="outline">
                 <TrophyIcon className="h-3.5 w-3.5 -translate-x-1 text-white" />
                 Best Residential Design
               </div>
@@ -54,10 +67,10 @@ export default function Featuring() {
             <div className='flex flex-row items-center gap-2'>
             <Gallery />
             <div>
-              <p className='font-medium text-base md:text-lg'>
+              <p className='font-medium text-sm md:text-base'>
               Check The Aquatic Center Gallery 
              </p>
-              <p className='text-gray-300 text-sm'>
+              <p className='text-gray-300 text-xs'>
 Watch The Video
               </p>
             </div>
@@ -110,6 +123,8 @@ Watch The Video
           </div>
         </div>
       </div>
+
+    
     </section>
   )
 }

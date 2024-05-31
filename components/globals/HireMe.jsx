@@ -1,6 +1,6 @@
 export const HireMe = () => {
     return (
-      <a target='_blank' href="https://mail.google.com/mail/u/0/?fs=1&to=ali.elsabbagh@ejust.edu.eg&tf=cm" className="text-center cursor-pointer group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
+      <a target='_blank' href="https://mail.google.com/mail/u/0/?fs=1&to=ali.elsabbagh@ejust.edu.eg&tf=cm" className=" text-center cursor-pointer group relative grid overflow-hidden rounded-full px-4 py-1 shadow-[0_1000px_0_0_hsl(0_0%_20%)_inset] transition-colors duration-200"
       style={{
         boxShadow:'rgb(86 67 100 / 80%) 0px 8px 30px'
       }}>

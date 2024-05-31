@@ -5,31 +5,30 @@ import ThreeDPhotoCarousel from "./ThreeDPhotoCarousel";
 import colSpanTech from '@/assets/quick-carousel/6.webp'
 import colSpanTech3 from '@/assets/quick-carousel/12.webp'
 import building from '@/assets/building.webp'
-import { RightArrow, TechStack } from "../globals/Icons";
-const slugs = [
-  "typescript",
-  "androidstudio",
-  "sonarqube",
-  "figma",
-  "3dmax",
-  "gitlab",
-];
- 
+import {  Share, TechStack } from "../globals/Icons";
+
 
 const AnimatedGridPatternDemo = () => {
   return (
-    <div className="relative min-h-screen flex w-full items-center justify-center overflow-hidden backdrop-blur-3xl py-16"
+    <div className="relative min-h-screen flex w-full items-center justify-center overflow-hidden backdrop-blur-3xl py-6"
     style={{
       backdropFilter: "blur(5rem)",
     }}>
       <div className="relative  flex flex-col w-full justify-center backdrop-blur-lg"
                 style={{
                   backdropFilter: "blur(10px)",
+
                 }}>
        
-        <h1 className="md:text-4xl text-2xl text-primary-600 text-center font-bold relative z-20">
+        <div className="flex flex-row items-center justify-around w-full md:px-44 px-2">
+        <h1 className="md:text-4xl text-xl text-primary-600 text-center font-bold relative z-20">
           Projects Thumbnails
-        </h1>
+          </h1>
+          <a href="/projects">
+          <Share  />
+            
+          </a>
+        </div>
         <div className="relative z-20">
           <ThreeDPhotoCarousel />
         </div>
@@ -84,6 +83,7 @@ const AnimatedGridPatternDemo = () => {
         maxOpacity={0.3}
         duration={3}
         repeatDelay={1}
+
         className="-z-20 md:p-72 [mask-image:radial-gradient(300px_circle_at_center,white,transparent)]
         inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
       />
