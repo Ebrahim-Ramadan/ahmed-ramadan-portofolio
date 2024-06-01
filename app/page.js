@@ -3,6 +3,7 @@ import { Separator } from "@/components/globals/Icons";
 
 import {RetroGridDemo} from "@/components/Landing/RetroGridDemo";
 import Featuring from "@/components/Featuring/Featuring";
+import { Footer } from "@/components/globals/Footer";
 
 
 export default function Home() {
@@ -18,6 +19,8 @@ export default function Home() {
       <Separator />
 
       <Featuring />
+<Footer/>
+
     </main>
   );
 }

@@ -4,7 +4,6 @@ import FixedDrawer from "@/components/globals/FixedDrawer";
 import Header from "@/components/globals/Header";
 import { RetroGrid } from "@/components/Landing/RetroGrid";
 import { Footer } from "@/components/globals/Footer";
-import { ViewTransitions } from 'next-view-transitions'
 
 export const metadata = {
   title: "Ahmed Ramadan",
@@ -13,20 +12,20 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ViewTransitions>
 <html lang="en">
 
 <body className={GeistSans.className}>
-  <Header />
+ 
+        
+        {children}
+        <Header />
 <RetroGrid />
   
-<FixedDrawer/>
-{children}
+        <FixedDrawer />
 <Footer/>
-
+        
 </body>
 </html>
-    </ViewTransitions>
 
     
   );

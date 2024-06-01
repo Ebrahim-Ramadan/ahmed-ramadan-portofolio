@@ -22,7 +22,7 @@ export const RetroGridDemo = () => {
   }, []);
 
   const maxScroll = 200; // Maximum scroll value where the scaling stops
-  const newScale = Math.max(0.6, 1 - (debouncedScrollY / maxScroll) * 0.3); 
+  const newScale = Math.max(0.2, 1 - (debouncedScrollY / maxScroll) * 0.1); 
   const newBorderRadius = `${2 + (debouncedScrollY / maxScroll) * 2}rem`; 
   const newOpacity = Math.max(0.6, 1 - (debouncedScrollY / maxScroll) * 0.3); 
 
