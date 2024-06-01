@@ -9,7 +9,7 @@ export const HomeIcon = () => (
 export const Separator = () => {
   return (
     < div class="flex flex-row justify-center w-full text-center" >
-      <div class="bg-gradient-to-r from-black via-primary-500 to-transparent w-full  h-[2px] opacity-60"></div>
+      <div class="bg-gradient-to-r from-transparent via-primary-500 to-transparent w-full  h-[2px] opacity-60"></div>
     </div >
       
     )

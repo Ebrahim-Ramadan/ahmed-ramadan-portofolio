@@ -20,7 +20,7 @@ export const Header = () => {
   }, [isSticky]);
 
   return (
-    <div className={` flex flex-col-reverse md:flex-row w-full items-center justify-center py-4 z-20 fixed top-0`}>
+    <div className={` flex flex-col-reverse md:flex-row w-full items-center justify-center pb-4 pt-2 z-20 fixed top-0`}>
       
       <div
         className={`flex flex-row  ${isSticky&&'hidden'} [&>*]:flex [&>*]:items-center [&>*]:cursor-pointer`}

@@ -11,7 +11,7 @@ import { AwardIcon, Gallery, Like, Share, TrophyIcon, Views } from '../globals/I
 
 export default function Featuring() {
   return (
-    <section className="w-full  min-h-screen w-full flex flex-row items-center justify-center">
+    <section className="w-full   w-full flex flex-row items-center justify-center">
       <div className="w-full px-2 md:px-32 grid grid-cols-1 lg:grid-cols-2 gap-2 ">
         <div className="relative w-full h-[500px] md:h-[50rem] rounded-3xl ">
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-transparent z-10 flex flex-col justify-end p-4 rounded-3xl">
@@ -68,10 +68,10 @@ export default function Featuring() {
             <Gallery />
             <div>
               <p className='font-medium text-sm md:text-base'>
-              Check The Aquatic Center Gallery 
+               The Aquatic Center Gallery 
              </p>
               <p className='text-gray-300 text-xs'>
-Watch The Video
+Vist and Watch The Video
               </p>
             </div>
             </div>

@@ -37,11 +37,11 @@ export const MagneticBackgroundTab = ({
         <span>
         {item.icon &&  (
           isSticky ?
-          <span className="h-5 w-5 ">
+          <span >
           {item.icon}
             </span>
             :
-            <span className="h-5 w-5 md:block hidden">
+            <span className=" md:block hidden">
             {item.icon}
           </span>
         )}

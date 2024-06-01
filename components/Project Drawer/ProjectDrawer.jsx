@@ -2,7 +2,7 @@
 
 import { Drawer } from 'vaul';
 
-export function ProjectDrawer() {
+export function ProjectDrawer({children}) {
   return (
     <div className="relative">
       <div

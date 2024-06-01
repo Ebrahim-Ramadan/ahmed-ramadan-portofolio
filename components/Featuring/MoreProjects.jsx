@@ -1,13 +1,16 @@
 import React from 'react'
 import { Link } from 'next-view-transitions'
 import { Share } from '../globals/Icons'
+import { HireMe } from '../globals/HireMe'
 export const MoreProjects = () => {
   return (
-      <div className='bg-primary-900  rounded-3xl mt-12 hover:bg-primary-800 transition duration-200 cursor-pointer'>
-          <Link href='/projects' className='px-2 py-1 md:px-4 md:py-2 font-bold text-white flex flex-row items-center gap-2'>
-        See More Projects
+    <div className='flex flex-col md:flex-row items-center gap-2 w-full justify-center mt-16 md:mt-0'>
+      <Link href='/projects' className='bg-primary-900  rounded-3xl hover:bg-primary-800 transition duration-200 cursor-pointer px-4 py-2 font-bold text-white flex flex-row items-center gap-2'>
+        My Projects
       <Share/>
       </Link>
+      <HireMe/>
+          
     </div>
   )
 }

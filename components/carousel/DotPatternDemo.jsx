@@ -22,7 +22,7 @@ const AnimatedGridPatternDemo = () => {
        
         <div className="flex flex-row items-center justify-around w-full md:px-44 px-2">
         <h1 className="md:text-4xl text-xl text-primary-600 text-center font-bold relative z-20">
-          Projects Thumbnails
+          Featuring Projects
           </h1>
           <a href="/projects">
           <Share  />
