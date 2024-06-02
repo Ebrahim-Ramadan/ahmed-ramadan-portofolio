@@ -15,16 +15,8 @@ const AnimatedGridPatternDemo = () => {
       <div className="relative  flex flex-col w-full justify-center "
       >
        
-        <a href="/projects" className="group flex flex-row items-center justify-around w-full md:px-44 px-2">
-        <h1 className="md:text-4xl text-xl text-center font-medium text-slate-200">
-          Featuring Projects
-          </h1>
-          <RightArrow className='group-hover:scale-110 transition duration-200'/>
-            
-        </a>
-        <div className="relative z-20">
-          <ThreeDPhotoCarousel />
-        </div>
+       
+       <ThreeDPhotoCarousel />
         <div className="flex flex-col justify-center items-center mt-6">
           <div className="md:grid md:grid-cols-3 flex flex-col h-[30rem] backdrop-blur-3xl  rounded-3xl w-full md:w-2/3 gap-4">
         

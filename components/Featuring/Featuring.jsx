@@ -20,7 +20,7 @@ export default function Featuring() {
             <p className="md:px-4 font-light text-gray-300 md:text-base text-sm w-full">
               This award-winning project showcases my commitment to sustainable design and innovative architectural solutions, and also my college graduation project with a total area of 42,000 square meters, based in Cairo, 8 minutes from Al-Ahly we al-salam Club Stadium by car, and 24 minutes from Cairo Airport.
               </p>
-              <div className='flex flex-row md:flex-col items-center [&>*]:flex  [&>*]:flex-col  [&>*]:items-center gap-4'>
+              <div className='flex justify-end w-full md:w-fit flex-row md:flex-col items-center [&>*]:flex  [&>*]:flex-col  [&>*]:items-center gap-4'>
                 <div>
                   <Views />
                   20,422

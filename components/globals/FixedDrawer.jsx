@@ -3,6 +3,7 @@
 import Image from "next/image";
   import React, { useState, useEffect, useRef } from "react";
 import { copyToClipboard } from "@/utils/Copy";
+import { DockDemo } from "../ContactMe/DockDemo";
   export default function FixedDrawer() {
     const refMenu = useRef(null);
     const [openMenu, setOpenMenu] = useState(false);
@@ -75,7 +76,7 @@ import { copyToClipboard } from "@/utils/Copy";
     }, [refMenu]);
   
     return (
-      <div className="fixed bottom-0 left-0 z-50 md:mx-6 mb-2 flex  w-full  items-end justify-start">
+      <div className="fixed bottom-16 left-0 z-50 md:mx-6 mb-2 flex  w-full  items-end justify-start">
         <AnimatePresence>
           {openMenu && (
             <motion.div
@@ -135,7 +136,9 @@ import { copyToClipboard } from "@/utils/Copy";
                       </div>
                         </div>
                       </div>
-                    </li>
+                </li>
+      <DockDemo/>
+                
               </motion.ul>
             </motion.div>
           )}

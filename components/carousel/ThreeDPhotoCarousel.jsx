@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { motion, useAnimation, useMotionValue, useTransform } from "framer-motion";
 import Image from "next/image";
+import { RightArrow } from "../globals/Icons";
 
 const images = [];
 for (let i = 1; i <= 14; i++) {
@@ -50,6 +51,7 @@ const ThreeDPhotoCarousel = () => {
 
   return (
     <>
+     
       <div className="relative h-36 md:h-[200px] w-full overflow-hidden">
         <div
           className="flex h-full items-center justify-center bg-mauve-dark-2"
