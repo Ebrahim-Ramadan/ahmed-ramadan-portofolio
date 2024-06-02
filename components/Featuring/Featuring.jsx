@@ -6,7 +6,7 @@ import featuring22 from '@/assets/milestone/gridgrid2.webp'
 import featuringImg3 from '@/assets/milestone/gridgrid.webp'
 import external from '@/assets/milestone/external.webp'
 import Image from 'next/image'
-import { AwardIcon, Gallery, Like, Share, TrophyIcon, Views } from '../globals/Icons'
+import { AwardIcon, Gallery, Like, RightArrow,  TrophyIcon, Views } from '../globals/Icons'
 
 
 export default function Featuring() {
@@ -75,7 +75,8 @@ Vist and Watch The Video
               </p>
             </div>
             </div>
-            <Share className='px-4'/>
+            <RightArrow/>
+
             </div>
           </a>
         </div>

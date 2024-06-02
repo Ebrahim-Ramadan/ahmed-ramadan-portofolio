@@ -2,7 +2,7 @@
 export  function RetroGrid() {
   return (
     <div
-      className="pointer-events-none top-0 left-0  fixed h-screen w-full overflow-hidden opacity-50 [perspective:200px]"
+      className="pointer-events-none top-0 left-0 -z-10 fixed h-screen w-full overflow-hidden opacity-50 [perspective:200px]"
     >
       {/* Grid */}
       <div className="absolute inset-0 [transform:rotateX(35deg)]">

@@ -19,7 +19,6 @@ export default function Home() {
       <Separator />
 
       <Featuring />
-<Footer/>
 
     </main>
   );

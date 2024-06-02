@@ -2,11 +2,11 @@ import Image from "next/image";
 import Grasshopper from '@/assets/Grasshopper.webp'
 import rhino from '@/assets/rhino.webp'
 import simlab from '@/assets/simlab.webp'
-export const HomeIcon = () => (
+export const HomeIcon = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-home"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
   );
   
-export const Separator = () => {
+export const Separator = (props) => {
   return (
     < div class="flex flex-row justify-center w-full text-center" >
       <div class="bg-gradient-to-r from-transparent via-primary-500 to-transparent w-full  h-[2px] opacity-60"></div>
@@ -14,13 +14,13 @@ export const Separator = () => {
       
     )
 }
-export const Like = () => {
+export const Like = (props) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="currentColor" stroke-width="0" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-heart"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
       
     )
 }
-export const Views = () => {
+export const Views = (props) => {
   return (
     <svg id="Show"width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
         <g id="Iconly/Bold/Show" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
@@ -32,22 +32,8 @@ export const Views = () => {
       
     )
 }
-export const Share = ({props}) => {
-  return (
-    <svg
-    {...props}
-      width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
-    <g id="Iconly/Bulk/Send" stroke="none" strokeWidth="1.5" fill="white" fill-rule="evenodd">
-        <g id="Send" transform="translate(2.000000, 2.000000)" fill="white" fill-rule="nonzero">
-            <path d="M19.4274202,0.578298605 C18.9274202,0.0672986048 18.1874202,-0.121701395 17.4974202,0.0782986048 L1.40742017,4.7272986 C0.679420165,4.9292986 0.163420165,5.5062986 0.024420165,6.2382986 C-0.117579835,6.9842986 0.378420165,7.9322986 1.02642017,8.3282986 L6.05742017,11.4002986 C6.57342017,11.7162986 7.23942017,11.6372986 7.66642017,11.2092986 L13.4274202,5.4482986 C13.7174202,5.1472986 14.1974202,5.1472986 14.4874202,5.4482986 C14.7774202,5.7372986 14.7774202,6.2082986 14.4874202,6.5082986 L8.71642017,12.2692986 C8.28842017,12.6972986 8.20842017,13.3612986 8.52342017,13.8782986 L11.5974202,18.9282986 C11.9574202,19.5272986 12.5774202,19.8682986 13.2574202,19.8682986 C13.3374202,19.8682986 13.4274202,19.8682986 13.5074202,19.8572986 C14.2874202,19.7582986 14.9074202,19.2272986 15.1374202,18.4772986 L19.9074202,2.5082986 C20.1174202,1.8282986 19.9274202,1.0882986 19.4274202,0.578298605" id="Fill-1"></path>
-            <path d="M7.45142017,17.1421986 C7.74342017,17.4351986 7.74342017,17.9101986 7.45142017,18.2031986 L6.08542017,19.5681986 C5.93942017,19.7151986 5.74742017,19.7881986 5.55542017,19.7881986 C5.36342017,19.7881986 5.17142017,19.7151986 5.02542017,19.5681986 C4.73242017,19.2751986 4.73242017,18.8011986 5.02542017,18.5081986 L6.39042017,17.1421986 C6.68342017,16.8501986 7.15842017,16.8501986 7.45142017,17.1421986 Z M6.66772017,13.3541986 C6.95972017,13.6471986 6.95972017,14.1221986 6.66772017,14.4151986 L5.30172017,15.7801986 C5.15572017,15.9271986 4.96372017,16.0001986 4.77172017,16.0001986 C4.57972017,16.0001986 4.38772017,15.9271986 4.24172017,15.7801986 C3.94872017,15.4871986 3.94872017,15.0131986 4.24172017,14.7201986 L5.60672017,13.3541986 C5.89972017,13.0621986 6.37472017,13.0621986 6.66772017,13.3541986 Z M2.90652017,12.1617986 C3.19852017,12.4547986 3.19852017,12.9297986 2.90652017,13.2227986 L1.54052017,14.5877986 C1.39452017,14.7347986 1.20252017,14.8077986 1.01052017,14.8077986 C0.818520165,14.8077986 0.626520165,14.7347986 0.480520165,14.5877986 C0.187520165,14.2947986 0.187520165,13.8207986 0.480520165,13.5277986 L1.84552017,12.1617986 C2.13852017,11.8697986 2.61352017,11.8697986 2.90652017,12.1617986 Z" id="Combined-Shape" opacity="0.400000006"></path>
-        </g>
-    </g>
-</svg>
-      
-    )
-}
-export const Gallery = () => {
+
+export const Gallery = (props) => {
   return (
 <svg width="50" height="50" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" >
     <g id="Iconly/Bold/Image" stroke="none" strokeWidth="1.5" fill="white" fillRule="evenodd">
@@ -59,12 +45,12 @@ export const Gallery = () => {
       
     )
 }
-export const FB = () => {
+export const FB = (props) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="transparent" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-facebook"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>  
     )
 }
-export const Gmail = () => {
+export const Gmail = (props) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="80" height="25" viewBox="0 0 50 50" fill="white">
     <path d="M12 23.403V23.39 10.389L11.88 10.3h-.01L9.14 8.28C7.47 7.04 5.09 7.1 3.61 8.56 2.62 9.54 2 10.9 2 12.41v3.602L12 23.403zM38 23.39v.013l10-7.391V12.41c0-1.49-.6-2.85-1.58-3.83-1.46-1.457-3.765-1.628-5.424-.403L38.12 10.3 38 10.389V23.39zM14 24.868l10.406 7.692c.353.261.836.261 1.189 0L36 24.868V11.867L25 20l-11-8.133V24.868zM38 25.889V41c0 .552.448 1 1 1h6.5c1.381 0 2.5-1.119 2.5-2.5V18.497L38 25.889zM12 25.889L2 18.497V39.5C2 40.881 3.119 42 4.5 42H11c.552 0 1-.448 1-1V25.889z"></path>
@@ -72,12 +58,12 @@ export const Gmail = () => {
 
     )
 }
-export const LinkedIn = () => {
+export const LinkedIn = (props) => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="white" stroke="transparent" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" class="lucide lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
     )
 }
-export const TechStack = () => {
+export const TechStack = (props) => {
   return (
     <div className="flex flex-row items-center">
     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 48 48">
@@ -108,7 +94,7 @@ export const TechStack = () => {
   </div>
     )
 }
-export const Telegram = ({props}) => {
+export const Telegram = (props) => {
   return (
 <svg {...props} xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="25" viewBox="0,0,256,256">
       <g fill="#ffffff" fill-rule="nonzero" stroke="none"  fontFamily="none"  font-size="none"
@@ -121,7 +107,7 @@ export const Telegram = ({props}) => {
     )
 }
 
-export const Loader = () => {
+export const Loader = (props) => {
   return (
     <span class="loader"></span>
   )
@@ -171,7 +157,7 @@ export function TrophyIcon(props) {
   )
 }
 
-export const RightArrow = ({props}) => {
+export const RightArrow = (props) => {
   return (
     <svg {...props} id="Arrow - Right 2"  width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
     <path  d="M8.5 5L12 8.5L12.875 9.375M15.5 12L8.5 19" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -180,22 +166,22 @@ export const RightArrow = ({props}) => {
     )
 }
   
-export const Behance = ({props}) => {
+export const Behance = (props) => {
   return (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M22 7h-7v-2h7v2zm1.726 10c-.442 1.297-2.029 3-5.101 3-3.074 0-5.564-1.729-5.564-5.675 0-3.91 2.325-5.92 5.466-5.92 3.082 0 4.964 1.782 5.375 4.426.078.506.109 1.188.095 2.14h-8.027c.13 3.211 3.483 3.312 4.588 2.029h3.168zm-7.686-4h4.965c-.105-1.547-1.136-2.219-2.477-2.219-1.466 0-2.277.768-2.488 2.219zm-9.574 6.988h-6.466v-14.967h6.953c5.476.081 5.58 5.444 2.72 6.906 3.461 1.26 3.577 8.061-3.207 8.061zm-3.466-8.988h3.584c2.508 0 2.906-3-.312-3h-3.272v3zm3.391 3h-3.391v3.016h3.341c3.055 0 2.868-3.016.05-3.016z"/></svg>
     
       
     )
   }
-  export const ProjectsIcon = ({props}) => (
+  export const ProjectsIcon = (props) => (
     <svg {...props}  xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-blocks"><rect width="7" height="7" x="14" y="3" rx="1"/><path d="M10 21V8a1 1 0 0 0-1-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H3"/></svg>
   );
   
-  export const ExperienceIcon = () => (
+  export const ExperienceIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-layers"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
   );
   
-  export const BehanceIcon = () => (
+  export const BehanceIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
     strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-mouse-pointer-click">
     <path d="m9 9 5 12 1.8-5.2L21 14Z" />

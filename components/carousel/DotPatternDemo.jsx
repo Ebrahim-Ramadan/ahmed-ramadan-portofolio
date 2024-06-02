@@ -1,34 +1,27 @@
 "use client";
 import Image from "next/image";
-import AnimatedGridPattern from "./dot-pattern";
 import ThreeDPhotoCarousel from "./ThreeDPhotoCarousel";
 import colSpanTech from '@/assets/quick-carousel/6.webp'
 import colSpanTech3 from '@/assets/quick-carousel/12.webp'
 import building from '@/assets/building.webp'
-import {  RightArrow, Share, TechStack } from "../globals/Icons";
+import {  RightArrow,  TechStack } from "../globals/Icons";
 
 
 const AnimatedGridPatternDemo = () => {
   return (
-    <div className="relative min-h-screen flex w-full items-center justify-center overflow-hidden backdrop-blur-3xl py-6"
-    style={{
-      backdropFilter: "blur(5rem)",
-    }}>
-      <div className="relative  flex flex-col w-full justify-center backdrop-blur-lg"
-                style={{
-                  backdropFilter: "blur(10px)",
-
-                }}>
+    <div className="relative min-h-screen flex w-full items-center justify-center overflow-hidden  py-6"
+    
+    >
+      <div className="relative  flex flex-col w-full justify-center "
+      >
        
-        <div className="flex flex-row items-center justify-around w-full md:px-44 px-2">
-        <h1 className="md:text-4xl text-xl text-primary-600 text-center font-bold relative z-20">
+        <a href="/projects" className="group flex flex-row items-center justify-around w-full md:px-44 px-2">
+        <h1 className="md:text-4xl text-xl text-center font-medium text-slate-200">
           Featuring Projects
           </h1>
-          <a href="/projects">
-          <Share  />
+          <RightArrow className='group-hover:scale-110 transition duration-200'/>
             
-          </a>
-        </div>
+        </a>
         <div className="relative z-20">
           <ThreeDPhotoCarousel />
         </div>
@@ -60,7 +53,7 @@ const AnimatedGridPatternDemo = () => {
                 
   </div>
   <div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
-    <a href="/projects" className="inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-xs pointer-events-auto gap-2">
+    <a href="/projects" className="inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-sm pointer-events-auto gap-2">
     Learn More <RightArrow/>
                 </a>
                 
@@ -80,15 +73,6 @@ const AnimatedGridPatternDemo = () => {
         </div>
        </div>
       </div>
-      <AnimatedGridPattern
-        numSquares={40}
-        maxOpacity={0.3}
-        duration={3}
-        repeatDelay={1}
-
-        className="-z-20 md:p-72 [mask-image:radial-gradient(300px_circle_at_center,white,transparent)]
-        inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
-      />
     </div>
   );
 };

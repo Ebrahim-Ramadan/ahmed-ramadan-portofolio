@@ -8,31 +8,30 @@ import { HireMe } from "../globals/HireMe";
 
 export const RetroGridDemo = () => {
   const [scrollY, setScrollY] = useState(0);
-  const debouncedScrollY = useDebounce(scrollY, 50); // Adjust the delay as needed
 
   const handleScroll = () => {
     setScrollY(window.scrollY);
   };
-
+  
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
-
+  
   const maxScroll = 200; // Maximum scroll value where the scaling stops
-  const newScale = Math.max(0.2, 1 - (debouncedScrollY / maxScroll) * 0.1); 
-  const newBorderRadius = `${2 + (debouncedScrollY / maxScroll) * 2}rem`; 
-  const newOpacity = Math.max(0.6, 1 - (debouncedScrollY / maxScroll) * 0.3); 
-
+  const newScale = Math.max(0.2, 1 - (scrollY / maxScroll) * 0.1); 
+  const newBorderRadius = `${2 + (scrollY / maxScroll) * 2}rem`; 
+  const newOpacity = Math.max(0.6, 1 - (scrollY / maxScroll) * 0.3); 
+  
   return (
     <div
-      className="z-10 relative flex h-screen w-full items-center justify-center overflow-hidden bg-[#18011D] transition-transform duration-300 "
+      className="z-10 relative flex h-screen w-full items-center justify-center overflow-hidden bg-primary-950 transition-transform duration-300 "
       style={{ transform: `scale(${newScale})`, borderRadius: newBorderRadius, opacity:newOpacity }}
     >
       <div className="flex flex-col justify-center items-center md:mt-24 gap-2">
-      <div className="relative flex items-center justify-center h-44 md:h-72 w-44 md:w-72 rounded-full bg-gradient-to-t from-primary-600 to-primary">
+      <div className="relative flex items-center justify-center h-44 md:h-72 w-44 md:w-72 rounded-full bg-gradient-to-t from-primary-600  to-transparent">
           <Image
     className="absolute md:h-96 h-56 w-fit bottom-0 rounded-b-full mask-image"
     width="auto"
@@ -41,7 +40,7 @@ export const RetroGridDemo = () => {
     alt="Profile"
   />
     </div>
-        <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-r from-primary-500 via-primary-400 to-primary-300 bg-clip-text text-center text-5xl md:text-7xl font-bold leading-none tracking-tighter text-transparent">
+        <span className="pointer-events-none z-10 whitespace-pre-wrap bg-gradient-to-r from-primary-600 via-primary-500 to-primary-300 bg-clip-text text-center text-5xl md:text-7xl font-bold leading-none tracking-tighter text-transparent">
           <Info word="Ahmed Ramadan" />
         </span>
         {/* <GradualSpacing
