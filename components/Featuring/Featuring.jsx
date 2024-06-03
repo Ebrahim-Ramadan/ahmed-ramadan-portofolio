@@ -1,38 +1,65 @@
-import featuringImg from '@/assets/milestone/cover.webp'
-import featuringImg1 from '@/assets/milestone/grid1.webp'
-import featuring21  from '@/assets/milestone/grid2.webp'
-import featuringFull  from '@/assets/milestone/grid3.webp'
-import featuring22 from '@/assets/milestone/gridgrid2.webp'
-import featuringImg3 from '@/assets/milestone/gridgrid.webp'
-import external from '@/assets/milestone/external.webp'
-import Image from 'next/image'
-import { AwardIcon, Gallery, Like, RightArrow,  TrophyIcon, Views } from '../globals/Icons'
+'use client'
+import { useRef } from "react";
+import {
+  motion,
+  useScroll,
+} from "framer-motion";
+import Image from "next/image";
 
+import image1 from "@/assets/milestone/1.webp";
+import image2 from "@/assets/milestone/2.webp";
+import image3 from "@/assets/milestone/3.webp";
+import image4 from "@/assets/milestone/4.webp";
+import image5 from "@/assets/milestone/5.webp";
+import image6 from "@/assets/milestone/6.webp";
+import image7 from "@/assets/milestone/7.webp";
+import { AwardIcon, TrophyIcon, TwistedArrow } from "../globals/Icons";
 
 export default function Featuring() {
-  return (
-    <section className="w-full   w-full flex flex-row items-center justify-center">
-      <div className="w-full px-2 md:px-32 grid grid-cols-1 lg:grid-cols-2 gap-2 ">
-        <div className="relative w-full h-[500px] md:h-[50rem] rounded-3xl ">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-t from-black/50 to-transparent z-10 flex flex-col justify-end p-4 rounded-3xl">
-            <div className="absolute inset-0 -z-10 bg-gradient-to-t from-black via-[#000000a8]  to-transparent"></div>
-            <div className='flex md:flex-row flex-col items-center gap-2 md:px-2'>
-            <p className="md:px-4 font-light text-gray-300 md:text-base text-sm w-full">
-              This award-winning project showcases my commitment to sustainable design and innovative architectural solutions, and also my college graduation project with a total area of 42,000 square meters, based in Cairo, 8 minutes from Al-Ahly we al-salam Club Stadium by car, and 24 minutes from Cairo Airport.
-              </p>
-              <div className='flex justify-end w-full md:w-fit flex-row md:flex-col items-center [&>*]:flex  [&>*]:flex-col  [&>*]:items-center gap-4'>
-                <div>
-                  <Views />
-                  20,422
-</div>
-                <div>
-                  <Like />
-                  2,188
-</div>
-              </div>
-           </div>
+  const ref = useRef(null);
+  const { scrollXProgress } = useScroll({ container: ref });
+  const images = [image3, image4, image5, image6, image7, image2, image1];
 
-            <div className="flex flex-col md:flex-row justify-end md:w-full gap-2 mt-4 [&>*]:flex [&>*]:flex-row [&>*]:items-center [&>*]:text-xs [&>*]:w-fit [&>*]:justify-end">
+  return (
+    <div className="space-y-4 p-4 md:grid md:grid-cols-3 justify-center items-center w-full md:px-44 ">
+      <div className="col-span-1 p-4 group">
+        <a href="https://www.behance.net/gallery/175726549/GRADUATION-PROJECT-OLYMPIC-AQUATIC-CENTER" className="text-xl md:text-3xl font-bold hover:underline ">
+        OLYMPIC AQUATIC CENTER
+</a>
+
+        <p className="text-primary-600 text-xs ms:text-sm">
+16 May, 2023
+        </p>
+        <p className="text-slate-200 text-sm mt-2">
+        This award-winning project showcases my commitment to sustainable design and innovative architectural solutions, and also my college graduation project with a total area of <span className="font-medium text-slate-100">42,000 square meters</span> , based in Cairo, 8 minutes from Al-Ahly we al-salam Club Stadium by car, and 24 minutes from Cairo Airport.
+        </p>
+        <div className="w-full  items-center text-center justify-center px-4 hidden md:flex">
+        <TwistedArrow className='group-hover:scale-105 transition duration-200 w-12 md:w-40 '/>
+        </div>
+       
+</div>
+      <div className="flex-col flex col-span-2">
+      
+      <div className="px-2 ">
+          
+      <ul ref={ref} className=' list-none  w-full flex overflow-x-scroll h-full '>
+        
+        {images.map((img) => (
+          <li key={img} className='group FeaturingList px-0.5 py-1 md:px-2 md:py-2 flex-grow-0 flex-shrink-0 w-[100px] md:w-fit md:h-[20rem] hover:opacity-90 transition duration-200'>
+            <Image
+              src={img}
+              className=' border border-[#fff3] border-2 w-full h-full object-cover rounded-3xl'
+              width={800}
+              height='auto'
+            />
+        </li>
+          
+        ))}
+       
+      </ul>
+        </div>
+        <div className="flex justify-between md:justify-end w-full flex flex-row items-center p-2">
+        <div className="flex flex-col md:flex-row   md:w-full gap-2 [&>*]:flex [&>*]:flex-row [&>*]:items-center [&>*]:text-xs ">
               <div className=" bg-primary-700 px-3 py-1 rounded-3xl" variant="outline">
                 <TrophyIcon className="h-3.5 w-3.5 -translate-x-1 text-white" />
                 Best Residential Design
@@ -42,90 +69,20 @@ export default function Featuring() {
                 Sustainability Award
               </div>
             </div>
-          </div>
-          <Image
-            alt="Award-Winning Project"
-            className="w-full h-full object-cover rounded-3xl"
-            height={500} // Changed height to match grid images
-            src={featuringImg}
-            
-            width={1200}
-          />
-          <a target='_blank' href='https://www.behance.net/gallery/175726549/GRADUATION-PROJECT-OLYMPIC-AQUATIC-CENTER' className='flex flex-col group justify-end overflow-hidden p-4 backdrop-blur-xl bg-black/80 rounded-b-3xl hover:bg-black/40 transition duration-200 h-60'>
-          <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-[#000000a8]  to-transparent"></div>
-
-          <div className=" absolute inset-0 -z-10 bg-gradient-to-b from-black to-transparent ">
-              <Image
-                    src={external}
-                    width='auto'
-                  height={800}
-                  className='object-cover h-[100%] w-full group-hover:scale-105 transition duration-200'
-                    alt="colSpanTech1"
-                  />
-              </div>
-            <div className='flex flex-row justify-between items-center z-10'>
-            <div className='flex flex-row items-center gap-2'>
-            <Gallery />
-            <div>
-              <p className='font-medium text-sm md:text-base'>
-               The Aquatic Center Gallery 
-             </p>
-              <p className='text-gray-300 text-xs'>
-Vist and Watch The Video
-              </p>
-            </div>
-            </div>
-            <RightArrow/>
-
-            </div>
-          </a>
-        </div>
-
-        <div className='flex flex-col gap-2 md:gap-4 px-2 md:px-4 mt-64 md:mt-0'>
-        <Image
-            alt="Award-Winning Project"
-            className="rounded-3xl overflow-hidden h-72 object-cover"
-            height={500} // Changed height to match grid images
-            src={featuringFull}
-            width='auto'
-          />
-          <div className="flex flex-col md:grid md:grid-cols-2 gap-2 md:gap-4 [&>*]:rounded-3xl [&>*]:object-cover [&>*]:aspect-[12/9]">
-            <Image
-              alt="Award-Winning Project"
-              className=" overflow-hidden"
-              height={300} // Adjusted height to be smaller
-              src={featuringImg1}
-              width='auto'
-            />
-            <Image
-              alt="Award-Winning Project"
-              className=" overflow-hidden"
-              height={300} // Adjusted height to be smaller
-              src={featuringImg3}
-              width='auto'
-            />
-          </div>
-         
-          <div className="w-full h-fit flex flex-col md:grid md:grid-cols-2 gap-2 md:gap-4 [&>*]:rounded-3xl [&>*]:object-cover">
-            <Image
-              alt="Award-Winning Project"
-              className="h-[30rem] w-full overflow-hidden"
-              height={800} // Adjusted height to be smaller
-              src={featuring21}
-              width='auto'
-            />
-            <Image
-              alt="Award-Winning Project"
-              className="h-[30rem] w-full overflow-hidden"
-              height={800} // Adjusted height to be smaller
-              src={featuring22}
-              width='auto'
-            />
-          </div>
-        </div>
-      </div>
-
-    
-    </section>
-  )
+      <svg id="progress" width="50" height="50" viewBox="0 0 100 100">
+        <circle cx="50" cy="50" r="25" pathLength="1" className="opacity-30 stroke-primary-500" />
+        <motion.circle
+          cx="50"
+          cy="50"
+          r="25"
+              pathLength="1"
+              
+          className="stroke-[#f6ebcf9f]"
+          style={{ pathLength: scrollXProgress }}
+        />
+      </svg>
+    </div>
+    </div>
+    </div>
+  );
 }

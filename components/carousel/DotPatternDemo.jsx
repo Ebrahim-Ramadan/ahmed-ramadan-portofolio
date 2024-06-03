@@ -15,10 +15,9 @@ const AnimatedGridPatternDemo = () => {
       <div className="relative  flex flex-col w-full justify-center "
       >
        
-       
        <ThreeDPhotoCarousel />
-        <div className="flex flex-col justify-center items-center mt-6">
-          <div className="md:grid md:grid-cols-3 flex flex-col h-[30rem] backdrop-blur-3xl  rounded-3xl w-full md:w-2/3 gap-4">
+        <div className="flex flex-col justify-center items-center mt-6 px-4 md:px-44">
+          <div className="md:grid md:grid-cols-3 flex flex-col h-[35rem] backdrop-blur-3xl  rounded-3xl w-full gap-4">
         
             <div className="cursor-pointer h-[100%] md:col-span-2 relative flex w-full  items-center justify-center overflow-hidden rounded-3xl bg-background group ">
               <div className="absolute inset-0 z-0 bg-gradient-to-t from-black via-[#000000a8]  to-transparent"></div>
