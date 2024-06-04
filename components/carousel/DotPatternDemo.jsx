@@ -26,24 +26,24 @@ const AnimatedGridPatternDemo = () => {
                     src={colSpanTech3}
                     width='auto'
                   height={600}
-                  className='object-cover h-[100%] w-full group-hover:scale-105 transition duration-200'
+                  className='object-cover h-[100%] w-full group-hover:scale-105 transition duration-400'
                     alt="colSpanTech1"
                   />
               </div>
-              <div className="mt-16 px-4 pointer-events-none z-10 flex transform-gpu p-6 flex-col gap-1 transition-all duration-300 group-hover:-translate-y-10">
+              <div className="mt-44 px-4 pointer-events-none z-10 flex transform-gpu p-6 flex-col gap-1 transition-all duration-300 group-hover:-translate-y-10">
                 <Image
-                  className="group-hover:scale-90 w-24 transition duration-200"
+                  className="group-hover:scale-90 w-24 transition duration-400"
                 alt="colSpanTech"
                 src={building}
                 width='auto'
                 height={1000}
               />
-    <h3 className="text-lg md:text-xl font-semibold text-neutral-700 dark:text-neutral-300">Modern Technologies</h3>
-                <p className="text-neutral-400 leading-normal md:w-1/3 leading-[1rem]">I use Modern Technologies for modeling and rendering on a daily basis for optimum effeciency. </p> 
+    <h3 className="text-lg md:text-xl font-semibold  ">Modern Technologies</h3>
+                <p className="text-gray-300 leading-normal md:w-1/3 leading-[1rem]">I use Modern Technologies for modeling and rendering on a daily basis for optimum effeciency. </p> 
     <TechStack/>
                 
   </div>
-  <div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all duration-300 group-hover:translate-y-0 group-hover:opacity-100">
+  <div className="pointer-events-none absolute bottom-0 flex w-full translate-y-10 transform-gpu flex-row items-center p-4 opacity-0 transition-all flex justify-end  duration-300 group-hover:translate-y-0 group-hover:opacity-100">
     <a href="/projects" className="inline-flex items-center justify-center font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-8 rounded-md px-3 text-sm pointer-events-auto gap-2">
     Learn More <RightArrow/>
                 </a>

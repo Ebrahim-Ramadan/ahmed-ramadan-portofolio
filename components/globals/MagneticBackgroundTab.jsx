@@ -56,7 +56,7 @@ export const MagneticBackgroundTab = ({
           </span>
           
         <div
-          className="absolute bottom-0 left-0 -z-0  w-full rounded-3xl hidden md:block h-full  bg-primary-switchPalette"
+          className="absolute bottom-0 left-0 -z-0  w-full rounded-3xl hidden md:block h-full  bg-primary-700"
           style={{
             transform: `translate(${hoverPosition.x}px, ${hoverPosition.y}px)`,
             opacity: hoverPosition.opacity,

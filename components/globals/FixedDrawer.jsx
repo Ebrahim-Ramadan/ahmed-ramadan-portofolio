@@ -76,7 +76,7 @@ import { DockDemo } from "../ContactMe/DockDemo";
     }, [refMenu]);
   
     return (
-      <div className="fixed bottom-16 left-0 z-50 md:mx-6 mb-2 flex  w-full  items-end justify-start">
+      <div className="fixed bottom-4 left-0 z-50 md:mx-6 mb-2 flex  w-full  items-end justify-start">
         <AnimatePresence>
           {openMenu && (
             <motion.div
@@ -144,7 +144,7 @@ import { DockDemo } from "../ContactMe/DockDemo";
           )}
         </AnimatePresence>
         <motion.button
-          className="backdrop-blur-md bg-white/30 fixed bottom-12 md:bottom-6 left-6 flex h-12 w-12 items-center justify-center rounded-full bg-mauve-dark-1 p-2 text-mauve-dark-12 outline-none dark:bg-mauve-light-1 dark:text-mauve-light-12"
+          className="backdrop-blur-md bg-white/30 fixed bottom-10 left-6 md:left-20 flex h-12 w-12 items-center justify-center rounded-full bg-mauve-dark-1 p-2 text-mauve-dark-12 outline-none dark:bg-mauve-light-1 dark:text-mauve-light-12"
           disabled={openMenu}
           onClick={(e) => {
             e.stopPropagation();

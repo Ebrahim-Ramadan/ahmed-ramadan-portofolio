@@ -1,7 +1,6 @@
 'use client';
 import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
-import { FixedNav } from './FixedNav';
 import { HomeIcon , ProjectsIcon, ExperienceIcon, BehanceIcon, Behance} from './Icons';
 import { MagneticBackgroundTab } from './MagneticBackgroundTab';
 
@@ -23,19 +22,13 @@ export const Header = () => {
     <div className={` flex flex-col-reverse md:flex-row w-full items-center justify-center pb-4 pt-2 z-20 fixed top-0`}>
       
       <div
-        className={`flex flex-row  ${isSticky&&'hidden'} [&>*]:flex [&>*]:items-center [&>*]:cursor-pointer`}
+        className={`px-2 flex flex-row rounded-3xl  ${isSticky&&'backdrop-blur-3xl'} [&>*]:flex [&>*]:items-center [&>*]:cursor-pointer`}
       >
         {tabs.map((item) => (
           <MagneticBackgroundTab key={item.id} item={item}  />
         ))}
       </div>
-      {isSticky &&
-        <FixedNav>
-           {tabs.map((item) => (
-             <MagneticBackgroundTab key={item.id} item={item} isSticky={isSticky} />
-        ))}
-      </FixedNav>
-      }
+    
     </div>
   );
 };

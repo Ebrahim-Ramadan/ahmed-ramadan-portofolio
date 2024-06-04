@@ -22,8 +22,8 @@ export default function Featuring() {
 
   return (
     <div className="space-y-4 p-4 md:grid md:grid-cols-3 justify-center items-center w-full md:px-44 ">
-      <div className="col-span-1 p-4 group">
-        <a href="https://www.behance.net/gallery/175726549/GRADUATION-PROJECT-OLYMPIC-AQUATIC-CENTER" className="text-xl md:text-3xl font-bold hover:underline ">
+      <div className="col-span-1 px-4 py-2 group">
+        <a target='_blank' href="https://www.behance.net/gallery/175726549/GRADUATION-PROJECT-OLYMPIC-AQUATIC-CENTER" className="text-xl md:text-3xl font-bold hover:underline ">
         OLYMPIC AQUATIC CENTER
 </a>
 
@@ -45,7 +45,7 @@ export default function Featuring() {
       <ul ref={ref} className=' list-none  w-full flex overflow-x-scroll h-full '>
         
         {images.map((img) => (
-          <li key={img} className='group FeaturingList px-0.5 py-1 md:px-2 md:py-2 flex-grow-0 flex-shrink-0 w-[100px] md:w-fit md:h-[20rem] hover:opacity-90 transition duration-200'>
+          <li key={img} className='group FeaturingList px-0.5 py-1 md:px-2 md:py-2 flex-grow-0 flex-shrink-0 w-[130px] md:w-fit md:h-[20rem] hover:opacity-90 transition duration-200'>
             <Image
               src={img}
               className=' border border-[#fff3] border-2 w-full h-full object-cover rounded-3xl'
