@@ -7,21 +7,20 @@ import {
 import Image from "next/image";
 
 import { AwardIcon, TrophyIcon, TwistedArrow } from "../globals/Icons";
-import { projectsData } from "@/utils/projectsData";
 
 export  function Featuring({ProjectData}) {
   const ref = useRef(null);
   const { scrollXProgress } = useScroll({ container: ref });
 
   return (
-    <div className="space-y-2 p-2 md:grid md:grid-cols-3 justify-center items-center w-full md:px-44 group">
+    <div className="space-y-2 p-2 md:grid md:grid-cols-3 justify-center items-center w-full md:px-12 lg:px-44 group">
       <div className="col-span-1 px-2 md:px-4 py-2 ">
         <a target='_blank' href={ProjectData.href} className="text-xl md:text-3xl font-bold hover:underline ">
       {ProjectData.title}
 </a>
 
-        <p className="text-primary-600 text-xs ms:text-sm">
-16 May, 2023
+        <p className="text-primary-500 text-xs ms:text-sm">
+{ProjectData.date}
         </p>
         <p className="text-slate-200 text-sm mt-2">
       {ProjectData.content}

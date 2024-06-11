@@ -36,9 +36,8 @@ export const Header = () => {
 export default Header;
 
 const tabs = [
-  { id: 1, text: 'Home', href: '/', icon: <HomeIcon /> },
-  { id: 3, text: 'Projects', href: '/projects', icon: <ProjectsIcon /> },
-  { id: 2, text: 'Experience', href: '4', icon: <ExperienceIcon /> },
+  { id: 3, text: 'Projects', position: '1450', icon: <ProjectsIcon /> },
+  { id: 2, text: 'Experience', position: '0', icon: <ExperienceIcon /> },
   {
     id: 2, text: <Behance/>, href: 'https://www.behance.net/ARCHUWK/projects', icon: <BehanceIcon />
   },

@@ -1,11 +1,13 @@
 'use client'
+import { scrollToPosition } from "@/utils/scrollToPosition";
+import { useRouter } from "next/navigation";
 import React, {  useRef, useState } from "react";
 export const MagneticBackgroundTab = ({
   item,
   isSticky
 }) => {
   const ref = useRef(null);
-
+  const router = useRouter()
   const [hoverPosition, setHoverPosition] = useState({
     x: 0,
     y: 0,
@@ -24,10 +26,18 @@ export const MagneticBackgroundTab = ({
   const onMouseOut = () => {
     setHoverPosition({ x: 0, y: 0, opacity: 0 });
   };
+
+  const routeToBehance = () => {
+    if (item.href === 'https://www.behance.net/ARCHUWK/projects') {
+      router.push('https://www.behance.net/ARCHUWK/projects')      
+    } else {
+      scrollToPosition(item.position)      
+    }
+}
  
   return (
-    <a
-     href={item.href}
+    <button
+     onClick={routeToBehance}
         ref={ref}
         className="group relative h-12"
         onMouseMove={handleMouseMove}
@@ -63,6 +73,6 @@ export const MagneticBackgroundTab = ({
             opacity: hoverPosition.opacity,
           }}
         />
-      </a>
+      </button>
   );
 };

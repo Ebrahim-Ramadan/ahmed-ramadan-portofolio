@@ -53,7 +53,7 @@ export const DeveloperCard = () => {
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, rgba(205,205,205,.15), transparent 40%)`,
         }}
       />
-      <a className="mb-4 " href="https://ebrahim-ramadan.vercel.app/">
+      <a className="mb-4 " href="https://drive.google.com/file/d/1PZT7XO83HSmS2X5BmTjWntBAc7lTf9M1/view">
         <Image
           className="rounded-full border border-2 w-32"
           src={dev}
@@ -63,7 +63,7 @@ export const DeveloperCard = () => {
         />
       </a>
       <a
-        href="https://ebrahim-ramadan.vercel.app"
+        href="https://drive.google.com/file/d/1PZT7XO83HSmS2X5BmTjWntBAc7lTf9M1/view"
         target='_blank'
         className="hover:underline font-medium tracking-tight text-neutral-100"
       >
@@ -80,7 +80,7 @@ export const DeveloperCard = () => {
         Currently working at <a href="https://onvo.me/" className="hover:underline text-white">Onvo</a>
       </p>
       <p className="text-sm text-neutral-400">
-        Teaching Instructor at <a href="https://ischoolvirtual.com/" className="hover:underline text-white">iSchool</a>
+        Programming Instructor at <a href="https://ischoolvirtual.com/" className="hover:underline text-white">iSchool</a>
       </p>
       </div>
     </div>

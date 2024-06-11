@@ -1,6 +1,7 @@
 export const projectsData = [
   {
     "id": "1",
+    "date": "July 20th 2023",
     "href": "https://www.behance.net/gallery/175726549/GRADUATION-PROJECT-OLYMPIC-AQUATIC-CENTER",
     "title": "OLYMPIC AQUATIC CENTER",
     "content": "This award-winning project showcases my commitment to sustainable design and innovative architectural solutions, and also my college graduation project with a total area of 42,000 square meters , based in Cairo, 8 minutes from Al-Ahly we al-salam Club Stadium by car, and 24 minutes from Cairo Airport.",
@@ -17,6 +18,7 @@ export const projectsData = [
   },
   {
     "id": "5",
+    "date":"May 22nd 2024",
     "href": "https://www.behance.net/gallery/196826449/READING-ZONE",
     "title": "LIVING ROOM 04",
     "content": "This Living Room with a cozy reading nook present a cohesive and refined interior design scheme that strikes a balance between modern simplicity and inviting comfort, creating a calming and aesthetically pleasing living environment.",
@@ -24,13 +26,15 @@ export const projectsData = [
       "https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/aa3ab1200138171.665dbcd347921.jpg",
       "https://mir-s3-cdn-cf.behance.net/project_modules/fs/11c2ff196826449.66269148b66e1.jpg",
       "https://mir-s3-cdn-cf.behance.net/project_modules/disp/992b6c200138171.665dbcd1b8cf5.jpg",
-      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/2d37a4200138171.665dbcd347306.jpg",
       "https://mir-s3-cdn-cf.behance.net/project_modules/fs/67207f200138171.665dbcd1b943b.jpg",
+      "https://mir-s3-cdn-cf.behance.net/project_modules/fs/2d37a4200138171.665dbcd347306.jpg",
+
       "https://mir-s3-cdn-cf.behance.net/project_modules/fs/d6fdcf196826449.66269148b61b2.png"
     ]
   },
   {
     "id": "2",
+    "date":"July 3rd 2023",
     "href": "https://www.behance.net/gallery/197720043/KITCHEN-04",
     "title": "Modern Appealing Kitchen",
     "content": "The Kitchen exemplifies modern design principles with its focus on simplicity, functionality, and clean aesthetics. The use of natural light, neutral colors, and high-quality materials enhances the overall appeal and usability of the space.",
@@ -47,6 +51,7 @@ export const projectsData = [
  
   {
     "id": "4",
+    "date":"March 29th 2023",
     "href": "https://www.behance.net/gallery/195091593/VILLA-09",
     "title": "Modern Appealing Villa",
     "content": "This modern residential building demonstrates a thoughtful consideration of space, light, and material integration, exemplifying the principles of modern architectural design while creating a visually striking and inviting living environment.",
@@ -62,6 +67,7 @@ export const projectsData = [
   
   {
     "id": "6",
+    "date":"March 11th 2024",
     "href": "https://www.behance.net/gallery/193649741/RECEPTION-AREA-DESIGN",
     "title": "RECEPTION AREA DESIGN",
     "content": "The living room exudes a sense of sophistication and tranquility, combining modern design principles with natural elements and a focus on creating a comfortable and visually appealing living space.",
@@ -86,6 +92,7 @@ export const projectsData = [
   },
   {
     "id": "3",
+    "date":"April 18th 2023",
     "href": "https://www.behance.net/gallery/168663447/CLASSICAL-STYLE-RECEPTION-DESIGN",
     "title": "CLASSICAL STYLE RECEPTION DESIGN",
     "content": "This Classical Reception showcases an opulent interior space that exudes a sense of classical elegance and refinement. The room features ornate architectural details and decor elements reminiscent of grand European styles from the past.",
@@ -98,6 +105,7 @@ export const projectsData = [
   },
   {
     "id": "7",
+    "date":" January 25th 2023",
     "href": "https://www.behance.net/gallery/189931469/PRIVATE-VILLAS-DINING-AREA-DESIGN",
     "title": "PRIVATE VILLA'S BATHROOM",
     "content": "This modern kitchen space exhibits a sleek, contemporary design aesthetic from an architectural perspective. The clean lines, minimalist cabinetry, and integration of natural wood tones with gray tones create a harmonious and visually appealing environment.",
