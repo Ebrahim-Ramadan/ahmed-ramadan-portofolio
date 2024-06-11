@@ -49,12 +49,12 @@ export const RetroGridDemo = () => {
         /> */}
         <div className="flex flex-col justify-center">
         <span className="text-gray-300 font-light px-4 text-center md:text-sm text-xs">
-          Senior Architect at <a className="underline font-medium cursor-pointer text-primary-600">
+          <span className="font-bold">Senior Architect</span> at <a className="underline font-medium cursor-pointer text-primary-600">
           ACE Moharram-Bakhoum
           </a>
         </span>
         <span className="text-gray-300 font-light px-4 text-center md:text-sm text-xs">
-          Talented Individual BAsed on <a className="font-medium cursor-pointer">
+          4-year Talented Individual Based on <a className="font-medium cursor-pointer">
           Cairo, Egypt.
           </a>
         </span>

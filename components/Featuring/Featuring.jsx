@@ -41,7 +41,7 @@ export  function Featuring({ProjectData}) {
           <li key={img} className=' FeaturingList px-0.5 py-1 md:px-2 md:py-2 flex-grow-0 flex-shrink-0 w-[130px] md:w-fit md:h-[20rem] hover:opacity-90 transition duration-200'>
             <Image
               src={img}
-              className=' border border-[#fff3] border-2 w-full h-full object-cover rounded-3xl'
+              className='bg-gray-600 border border-[#fff3] border-2 w-full h-full object-cover rounded-3xl'
               width={800}
               height='100'
             />
