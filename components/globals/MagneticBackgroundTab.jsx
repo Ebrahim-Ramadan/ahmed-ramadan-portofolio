@@ -34,6 +34,7 @@ export const MagneticBackgroundTab = ({
         onMouseLeave={onMouseOut}
       >
       <span className={`text-zinc-300 group-hover:text-zinc-200  font-medium relative px-1 md:px-4 py-1 md:py-2 text-sm  transition-colors  items-center z-10 flex flex-row ${isSticky ? 'md:gap-0 gap-2' : ''} gap-2 flex flex-row`}>
+        
         <span>
         {item.icon &&  (
           isSticky ?

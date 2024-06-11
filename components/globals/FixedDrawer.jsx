@@ -144,6 +144,9 @@ import { DockDemo } from "../ContactMe/DockDemo";
           )}
         </AnimatePresence>
         <motion.button
+          style={{
+            boxShadow:'0 8px 30px hsl(248.68deg 26.9% 60.79% / 55%)'
+          }}
           className="backdrop-blur-md bg-white/30 fixed bottom-10 left-6 md:left-20 flex h-12 w-12 items-center justify-center rounded-full bg-mauve-dark-1 p-2 text-mauve-dark-12 outline-none dark:bg-mauve-light-1 dark:text-mauve-light-12"
           disabled={openMenu}
           onClick={(e) => {

@@ -2,7 +2,7 @@ import DotPatternDemo from "@/components/carousel/DotPatternDemo";
 import { Separator } from "@/components/globals/Icons";
 
 import {RetroGridDemo} from "@/components/Landing/RetroGridDemo";
-import Featuring from "@/components/Featuring/Featuring";
+import {Projects} from "@/components/Featuring/Projects";
 
 
 export default function Home() {
@@ -17,8 +17,7 @@ export default function Home() {
       <DotPatternDemo />
       <Separator />
 
-      <Featuring />
-
+     <Projects/>
     </main>
   );
 }
