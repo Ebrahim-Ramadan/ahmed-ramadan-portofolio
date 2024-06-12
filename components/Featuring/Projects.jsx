@@ -1,12 +1,14 @@
 import {Featuring} from "./Featuring";
 import { projectsData } from "@/utils/projectsData"
+import {LazyLoad} from "@/utils/LazyLoad";
 export  const Projects =()=> { 
     return (
-        <div className="min-h-screen w-full flex flex-col items-center justify-center">
-           {projectsData.map((project) => (
-            <Featuring key={project.id} ProjectData={project} />
-          ))}
-        </div>
+      <LazyLoad>
+      {projectsData.map((project) => (
+          <Featuring key={project.id} ProjectData={project} />
+        ))}
+      </LazyLoad>
+       
     )
 }
 export default Projects

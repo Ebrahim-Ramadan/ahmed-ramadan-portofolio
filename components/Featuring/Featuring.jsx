@@ -13,7 +13,7 @@ export  function Featuring({ProjectData}) {
   const { scrollXProgress } = useScroll({ container: ref });
 
   return (
-    <div className="space-y-2 p-2 md:grid md:grid-cols-3 justify-center items-center w-full md:px-12 lg:px-44 group">
+    <div className="space-y-2 p-2 md:grid md:grid-cols-3 justify-center items-center w-full md:px-12 lg:px-44 group hover:bg-black/30 transition duration-200">
       <div className="col-span-1 px-2 md:px-4 py-2 ">
         <a target='_blank' href={ProjectData.href} className="text-xl md:text-3xl font-bold hover:underline ">
       {ProjectData.title}
@@ -52,7 +52,7 @@ export  function Featuring({ProjectData}) {
         </div>
         <div className="flex justify-between md:justify-end w-full flex flex-row items-center p-2">
 
-          {ProjectData.id === '1' &&
+          {ProjectData.id === '1' ?
            <div className="flex flex-col md:flex-row   md:w-full gap-2 [&>*]:flex [&>*]:flex-row [&>*]:items-center [&>*]:text-xs ">
            <div className=" bg-primary-700 px-3 py-1 rounded-3xl" variant="outline">
              <TrophyIcon className="h-3.5 w-3.5 -translate-x-1 text-white" />
@@ -62,7 +62,11 @@ export  function Featuring({ProjectData}) {
              <AwardIcon className="h-3.5 w-3.5 -translate-x-1 text-white" />
              Sustainability Award
            </div>
-       </div>
+            </div>
+            :
+            <div>
+
+            </div>
           }
        
           
